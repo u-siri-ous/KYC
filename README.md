@@ -1,6 +1,6 @@
-# KYC - Know Your Cards
+# [KYC - Know Your Cards](https://docs.google.com/document/d/15KSVZAqyA_GNhRiiGIvUCIxvTrStHTObt-v6eMBhtZU/edit)
 
-A game classifier and grader for the AI Lab - CV & NLP final.
+A game card grader and classifier for the AI Lab - CV & NLP final.
 
 With: Christian Bianchi, Nicola Mastrorilli and Leonard Vincent Ramil
 
