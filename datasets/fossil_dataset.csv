@@ -1,0 +1,63 @@
+name,type,rarity,stage,hp,power,attack 1,damage 1,cost 1,attack 2,damage 2,cost 2,weakness,resistance,retreat,pic
+aerodactyl,lotta,rara olografica,1,60,potere preistorico,attacco d'ala,30,3 qls,,,,erba,lotta -30,2 qls,https://media.pokemoncentral.it/wiki/2/23/AerodactylFossil16.jpg
+articuno,acqua,rara olografica,base,70,,ghiaccio secco,30,30 acqua,tormenta,50,50 acqua,,lotta -30,2 qls,https://media.pokemoncentral.it/wiki/a/a0/ArticunoFossil17.jpg
+ditto,normal,rara olografica,base,50,trasformazione,,,,,,,lotta,psiche - 30,1 qls,https://media.pokemoncentral.it/wiki/d/d4/DittoFossil3.jpg
+dragonite,normal,rara olografica,2,100,soccorso aereo,schianto,40x,4 qls,,,,,lotta - 30,1 qls,https://media.pokemoncentral.it/wiki/d/d5/DragoniteFossil4.jpg
+gengar,psiche,rara olografica,2,80,maledizione,pensiero oscuro,30,3 psiche,,,,,lotta - 30,1 qls,https://media.pokemoncentral.it/wiki/a/a6/GengarFossil5.jpg
+haunter,psiche,rara olografica,1,50,trasparenza,incubo,10,1 psiche 1 qls,,,,,lotta - 30,,https://media.pokemoncentral.it/wiki/a/af/HaunterFossil6.jpg
+hitmonlee,lotta,rara olografica,base,60,,calcio-salto,,2 lotta,calcio volante,50,3 lotta,psiche,,1 qls,https://media.pokemoncentral.it/wiki/d/de/HitmonleeFossil7.jpg
+hypno,psiche,rara olografica,1,90,,profezia,,1 psiche ,pensiero oscuro,30,3 psiche,psiche,,2 qls,https://media.pokemoncentral.it/wiki/d/d0/HypnoFossil8.jpg
+kabutops,lotta,rara olografica,2,60,,falce affilata,30,2 lotta,assorbi,40,4 lotta,erba,,2 qls,https://media.pokemoncentral.it/wiki/b/bc/KabutopsFossil9.jpg
+lapras,acqua,rara olografica,base,80,,pistolacqua,10+,1 acqua,stordiraggio,10,2 acqua,elettro,,2 qls,https://media.pokemoncentral.it/wiki/4/47/LaprasFossil10.jpg
+magneton,elettro,rara olografica,1,80,,sonicboom,20,1 elettro 1 qls,autodistruzione,100,4 elettro,lotta,,2 qls,https://media.pokemoncentral.it/wiki/5/53/MagnetonFossil11.jpg
+moltres,fuoco,rara olografica,base,70,,baleno,,1 fuoco,bomba di profondità,80,4 fuoco,,lotta - 30,2 qls,https://media.pokemoncentral.it/wiki/1/1d/MoltresFossil12.jpg
+muk,erba,rara olografica,1,70,gas neurotossico,melma,30,3 erba,,,,psiche,,2 qls,https://media.pokemoncentral.it/wiki/8/85/MukFossil13.jpg
+raichu,elettro,rara olografica,1,90,,superscossa,30,4 elettro,,,,1 lotta,,1 qls,https://media.pokemoncentral.it/wiki/6/6d/RaichuFossil14.jpg
+zapdos,elettro,rara olografica,base,80,,tempesta di fulmini,40,4 elettro,,,,,lotta - 30,2 qls,https://media.pokemoncentral.it/wiki/f/fb/ZapdosFossil30.jpg
+aerodactyl,lotta,rara,1,60,potere preistorico,attacco d'ala,30,3 qls,,,,erba,lotta -30,2 qls,https://media.pokemoncentral.it/wiki/2/23/AerodactylFossil16.jpg
+articuno,acqua,rara ,base,70,,ghiaccio secco,30,30 acqua,tormenta,50,50 acqua,,lotta -30,2 qls,https://media.pokemoncentral.it/wiki/a/a0/ArticunoFossil17.jpg
+ditto,normal,rara,base,50,trasformazione,,,,,,,lotta,psiche - 30,1 qls,https://media.pokemoncentral.it/wiki/d/d4/DittoFossil3.jpg
+dragonite,normal,rara,2,100,soccorso aereo,schianto,40x,4 qls,,,,,lotta - 30,1 qls,https://media.pokemoncentral.it/wiki/d/d5/DragoniteFossil4.jpg
+gengar,psiche,rara,2,80,maledizione,pensiero oscuro,30,3 psiche,,,,,lotta - 30,1 qls,https://media.pokemoncentral.it/wiki/a/a6/GengarFossil5.jpg
+haunter,psiche,rara,1,50,trasparenza,incubo,10,1 psiche 1 qls,,,,,lotta - 30,,https://media.pokemoncentral.it/wiki/a/af/HaunterFossil6.jpg
+hitmonlee,lotta,rara,base,60,,calcio-salto,,2 lotta,calcio volante,50,3 lotta,psiche,,1 qls,https://media.pokemoncentral.it/wiki/d/de/HitmonleeFossil7.jpg
+hypno,psiche,rara,1,90,,profezia,,1 psiche ,pensiero oscuro,30,3 psiche,psiche,,2 qls,https://media.pokemoncentral.it/wiki/d/d0/HypnoFossil8.jpg
+kabutops,lotta,rara,2,60,,falce affilata,30,2 lotta,assorbi,40,4 lotta,erba,,2 qls,https://media.pokemoncentral.it/wiki/b/bc/KabutopsFossil9.jpg
+lapras,acqua,rara,base,80,,pistolacqua,10+,1 acqua,stordiraggio,10,2 acqua,elettro,,2 qls,https://media.pokemoncentral.it/wiki/4/47/LaprasFossil10.jpg
+magneton,elettro,rara,1,80,,sonicboom,20,1 elettro 1 qls,autodistruzione,100,4 elettro,lotta,,2 qls,https://media.pokemoncentral.it/wiki/5/53/MagnetonFossil11.jpg
+moltres,fuoco,rara,base,70,,baleno,,1 fuoco,bomba di profondità,80,4 fuoco,,lotta - 30,2 qls,https://media.pokemoncentral.it/wiki/1/1d/MoltresFossil12.jpg
+muk,erba,rara,1,70,gas neurotossico,melma,30,3 erba,,,,psiche,,2 qls,https://media.pokemoncentral.it/wiki/8/85/MukFossil13.jpg
+raichu,elettro,rara,1,90,,superscossa,30,4 elettro,,,,1 lotta,,1 qls,https://media.pokemoncentral.it/wiki/6/6d/RaichuFossil14.jpg
+zapdos,elettro,rara,base,80,,tempesta di fulmini,40,4 elettro,,,,,lotta - 30,2 qls,https://media.pokemoncentral.it/wiki/f/fb/ZapdosFossil30.jpg
+arbok,erba,non comune,1,60,,panico,10,1 erba,dente avvelenato,20,2 erba 1 qls,psiche,,2 qls,https://media.pokemoncentral.it/wiki/6/63/ArbokFossil31.jpg
+cloyster,acqua,non comune,1,50,,morsa,30,2 acqua,sparalance,30x,2 acqua,elettro,,2 qls,https://media.pokemoncentral.it/wiki/1/14/CloysterFossil32.jpg
+gastly,psiche,non comune,base,50,,leccata,10,1 psiche,conversione di energia,,2 psiche,,lotta - 30,,https://media.pokemoncentral.it/wiki/c/c1/GastlyFossil33.jpg
+golbat,erba,non comune,1,60,,attacco d'ala,30,3 qls,sanguisuga,20,2 erba 1 qls,psiche,lotta - 30,,https://media.pokemoncentral.it/wiki/d/db/GolbatFossil34.jpg
+golduck,acqua,non comune,1,70,,psicoshock,10,1 psiche,iper raggio,20,2 acqua 1 qls,elettro,,1 qls,https://media.pokemoncentral.it/wiki/1/13/GolduckFossil35.jpg
+golem,lotta,non comune,2,80,,valanga,60,3 lotta 1 qls,autodistruzione,100,4 lotta,erba,,4 qls,https://media.pokemoncentral.it/wiki/6/62/GolemFossil36.jpg
+graveler,lotta,non comune,1,60,,rafforzatore,,2 lotta,tirasassi,40,2 lotta 1 qls,erba,,2 qls,https://media.pokemoncentral.it/wiki/b/bb/GravelerFossil37.jpg
+kingler,acqua,non comune,1,60,,flagello ,10x,1 acqua,martellata del granchio,40,2 acqua 1 qls,elettro,,3 qls,https://media.pokemoncentral.it/wiki/3/30/KinglerFossil38.jpg
+magmar,fuoco,non comune,base,70,,cortina fumogena,10,1 fuoco,smog,20,2 fuoco,acqua,,1 qls,https://media.pokemoncentral.it/wiki/8/81/MagmarFossil39.jpg
+omastar,acqua,non comune,2,70,,pistolacqua,20+,1 acqua 1 qls,sparalance,30x,2 acqua,erba,,1 qls,https://media.pokemoncentral.it/wiki/3/3e/OmastarFossil40.jpg
+sandslash,lotta,non comune,1,70,,lacerazione,20,2 qls,sfuriate,20x,2 fuoco,erba,elettro - 30,1 qls,https://media.pokemoncentral.it/wiki/a/ae/SandslashFossil41.jpg
+seadra,acqua,non comune,1,60,,pistolacqua,20+,1 acqua 1 qls,agilità,20,1 acqua 2 qls,elettro,,1 qls,https://media.pokemoncentral.it/wiki/1/1b/SeadraFossil42.jpg
+slowbro,psiche,non comune,1,60,strano comportamento,psicoshock,20,2 psiche,,,,psiche,,1 qls,https://media.pokemoncentral.it/wiki/8/8a/SlowbroFossil43.jpg
+tentacruel,acqua,non comune,1,60,,supersonico,,1 acqua,puntura di medusa,10,2 acqua,elettro,,,https://media.pokemoncentral.it/wiki/f/f0/TentacruelFossil44.jpg
+weezing,erba,non comune,1,60,,smog,20,2 erba,autodistruzione,60,2 erba 1 qls,psiche,,1 qls,https://media.pokemoncentral.it/wiki/7/76/WeezingFossil45.jpg
+ekans,erba,comune,base,40,,sputaveleno,,1 erba,avvolgibotta,20,1 erba 1 qls,psiche,,1 qls,https://media.pokemoncentral.it/wiki/d/d8/EkansFossil46.jpg
+geodude,lotta,comune,base,50,,sassaiola,10x,1 lotta 1 qls,,,,erba,,1 qls,https://media.pokemoncentral.it/wiki/5/57/GeodudeFossil47.jpg
+grimer,erba,comune,base,50,,collante fetido,10,1 qls,minimizzazione,,1 erba ,psiche,,1 qls,https://media.pokemoncentral.it/wiki/3/3e/GrimerFossil48.jpg
+horsea,acqua,comune,base,40,,cortina fumogena,10,1 acqua,,,,elettro,,,https://media.pokemoncentral.it/wiki/b/be/HorseaFossil49.jpg
+kabuto,lotta,comune,1,30,corazza di kabuto,graffio,10,1 qls,,,,erba,,1 qls,https://media.pokemoncentral.it/wiki/4/4d/KabutoFossil50.jpg
+krabby ,acqua,comune,base,50,,cerca famiglia,,1 acqua,morsa di ferro,20,1 acqua 1 qls,elettro,,2 qls,https://media.pokemoncentral.it/wiki/b/b3/KrabbyFossil51.jpg
+omanyte,acqua,comune,1,40,chiaroveggenza,pistolacqua,10+,1 acqua,,,,erba,,1 qls,https://media.pokemoncentral.it/wiki/9/9e/OmanyteFossil52.jpg
+psyduck,acqua,comune,base,50,,emicrania,,1 psiche,sfuriate,10x,1 acqua,elettro,,1 qls,https://media.pokemoncentral.it/wiki/9/95/PsyduckFossil53.jpg
+shellder,acqua,comune,base,30,,supersonico,,1 acqua,nascosto nella conchiglia,,1 acqua,elettro,,1 qls,https://media.pokemoncentral.it/wiki/a/ac/ShellderFossil54.jpg
+slowpoke,psiche,comune,base,50,,vuoto mentale,,1 qls,rovistare,,2 psiche,psiche,,1 qls,https://media.pokemoncentral.it/wiki/d/d9/SlowpokeFossil55.jpg
+tentacool,acqua,comune,base,30,svignarsela,acido,10,1 acqua,,,,elettro,,,https://media.pokemoncentral.it/wiki/f/f8/TentacoolFossil56.jpg
+zubat,erba,comune,base,40,,supersonico,,2 qls,sanguisuga,10,1 erba 1 qls,psiche,lotta - 30,,https://media.pokemoncentral.it/wiki/a/a9/ZubatFossil57.jpg
+mr. Fuji,,,,,,,,,,,,,,,
+ricarica di energia,,,,,,,,,,,,,,,
+gioco d'azzardo,,,,,,,,,,,,,,,
+riciclo,,,,,,,,,,,,,,,
+fossile misterioso,,,,,,,,,,,,,,,
