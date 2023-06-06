@@ -1,0 +1,64 @@
+Nome,Tipo,Rarità,Fase,PV,Ability,Mossa 1,Danno 1,Costo 1,Mossa 2,Danno 2 ,Costo 2,Debolezza,Resistenza,Costo ritirata,img
+Cleafable ,Normale,Rara Olografica,1,70,,Metronomo,,1 normale,Minimizzazione,,2 normale,Lotta,psico - 30,2 qls,https://wiki.pokemoncentral.it/Clefable_(Jungle_1)#/media/File:ClefableJungle1.jpg
+Electrode,Elettro,Rara Olografica,1,90,,Azione,20,2 normale,Saetta,20,3 elettro,Lotta,,1 qls,https://wiki.pokemoncentral.it/Electrode_(Jungle_2)#/media/File:ElectrodeJungle2.jpg
+Flaereon,Fuoco,Rara Olografica,1,70,,Attacco Rapido,10+,2 normale,Lanciafiamme,60,2 normale 2 fuoco,Acqua,,1 qls,https://wiki.pokemoncentral.it/Flareon_(Jungle_3)#/media/File:FlareonJungle3.jpg
+Jolteon,Elettro,Rara Olografica,1,70,,Attacco Rapido,10+,2 normale,Missilspillo,20x,2 elettro 1 normale,Lotta,,1 qls,https://wiki.pokemoncentral.it/Jolteon_(Jungle_4)#/media/File:JolteonJungle4.jpg
+Kangaskhan,Normale,Rara Olografica,Base,90,,Stratagemma,0,1 normale,Cometa Pugno,20x,4 normale,Lotta,psico - 30,3 qls,https://wiki.pokemoncentral.it/Kangaskhan_(Jungle_5)#/media/File:KangaskhanJungle5.jpg
+Mr. Mime,Psico,Rara Olografica,Base,40,Muro Invisibile,Meditazione,10+,,,,,Psico,,1 qls,https://wiki.pokemoncentral.it/Mr._Mime_(Jungle_6)#/media/File:MrMimeJungle6.jpg
+Nidoqueen,Erba,Rara Olografica,2,90,,Amorino,20+,1 foglia 1 normale,Mega Pugno,50,2 erba 2 normale,Psico,,3 qls,https://wiki.pokemoncentral.it/Nidoqueen_(Jungle_7)#/media/File:NidoqueenJungle7.jpg
+Pidgeot,Normale,Rara Olografica,2,80,,Attacco d'Ala,20,2 normale,Uragano,30,3 normale,Elettro,lotta - 30,,https://wiki.pokemoncentral.it/Pidgeot_(Jungle_8)#/media/File:PidgeotJungle8.jpg
+Pinsir,Erba,Rara Olografica,Base,60,,Presa di Ferro,20,2 erba,Ghigliottina,50,2 erba 2 normale,Fuoco,,1 qls,https://wiki.pokemoncentral.it/Pinsir_(Jungle_9)#/media/File:PinsirJungle9.jpg
+Scyther,Erba,Rara Olografica,Base,70,,Danza delle Spade,,1 erba,Lacerazione,30,3 normale,Fuoco,lotta - 30,,https://wiki.pokemoncentral.it/Scyther_(Jungle_10)#/media/File:ScytherJungle10.jpg
+Snorlax,Normale,Rara Olografica,Base,90,Pellaccia,Body Slam,30,4 normale,,,,Lotta,psico - 30,3 qls,https://wiki.pokemoncentral.it/Snorlax_(Jungle_11)#/media/File:SnorlaxJungle11.jpg
+Vaporeon,Acqua,Rara Olografica,1,80,,Attacco Rapido,10+,2 normale,Pistola ad Acqua,30+,2 acqua 1 normale,Elettro,,1 qls,https://wiki.pokemoncentral.it/Vaporeon_(Jungle_12)#/media/File:VaporeonJungle.jpg
+Venomoth,Erba,Rara Olografica,1,70,Scambia,Polvere Velenosa,10,2 erba,,,,Fuoco,lotta - 30,,https://wiki.pokemoncentral.it/Venomoth_(Jungle_13)#/media/File:VenomothJungle13.jpg
+Victreebel,Erba,Rara Olografica,2,80,,Attrazione Letale,,1 erba,Secrezione Collosa,20,2 erba,Fuoco,,2 qls,https://wiki.pokemoncentral.it/Victreebel_(Jungle_14)#/media/File:VictreebelJungle14.jpg
+Vileplume,Erba,Rara Olografica,2,80,Cura,Petalodanza,40x,3 erba,,,,Fuoco,,2 qls,https://wiki.pokemoncentral.it/Vileplume_(Jungle_15)#/media/File:VileplumeJungle15.jpg
+Wigglytuff,Normale,Rara Olografica,1,80,,Ninna Nanna,,1 normale,Fare la Ola,10+,3 normale,Lotta,psico - 30,2 qls,https://wiki.pokemoncentral.it/Wigglytuff_(Jungle_16)#/media/File:WigglytuffJungle16.jpg
+Cleafable ,Normale,Rara,1,70,,Metronomo,,1 normale,Minimizzazione,,2 normale, Lotta,psico - 30,2 qls,https://wiki.pokemoncentral.it/Clefable_(Jungle_1)#/media/File:ClefableJungle1.jpg
+Electrode,Elettro,Rara,1,90,,Azione,20,2 normale,Saetta,20,3 elettro,Lotta,,1 qls,https://wiki.pokemoncentral.it/Electrode_(Jungle_2)#/media/File:ElectrodeJungle2.jpg
+Flaereon,Fuoco,Rara,1,70,,Attacco Rapido,10+,2 normale,Lanciafiamme,60,2 normale 2 fuoco,Acqua,,1 qls,https://wiki.pokemoncentral.it/Flareon_(Jungle_3)#/media/File:FlareonJungle3.jpg
+Jolteon,Elettro,Rara,1,70,,Attacco Rapido,10+,2 normale,Missilspillo,20x,2 elettro 1 normale,Lotta,,1 qls,https://wiki.pokemoncentral.it/Jolteon_(Jungle_4)#/media/File:JolteonJungle4.jpg
+Kangaskhan,Normale,Rara,Base,90,,Stratagemma,0,1 normale,Cometa Pugno,20x,4 normale,Lotta,psico - 30,3 qls,https://wiki.pokemoncentral.it/Kangaskhan_(Jungle_5)#/media/File:KangaskhanJungle5.jpg
+Mr. Mime,Psico,Rara,Base,40,Muro Invisibile,Meditazione,10+,,,,,Psico,,1 qls,https://wiki.pokemoncentral.it/Mr._Mime_(Jungle_6)#/media/File:MrMimeJungle6.jpg
+Nidoqueen,Erba,Rara,2,90,,Amorino,20+,1 foglia 1 normale,Mega Pugno,50,2 erba 2 normale,Psico,,3 qls,https://wiki.pokemoncentral.it/Nidoqueen_(Jungle_7)#/media/File:NidoqueenJungle7.jpg
+Pidgeot,Normale,Rara,2,80,,Attacco d'Ala,20,2 normale,Uragano,30,3 normale,Elettro,lotta - 30,,https://wiki.pokemoncentral.it/Pidgeot_(Jungle_8)#/media/File:PidgeotJungle8.jpg
+Pinsir,Erba,Rara,Base,60,,Presa di Ferro,20,2 erba,Ghigliottina,50,2 erba 2 normale,Fuoco,,1 qls,https://wiki.pokemoncentral.it/Pinsir_(Jungle_9)#/media/File:PinsirJungle9.jpg
+Scyther,Erba,Rara,Base,70,,Danza delle Spade,,1 erba,Lacerazione,30,3 normale,Fuoco,lotta - 30,,https://wiki.pokemoncentral.it/Scyther_(Jungle_10)#/media/File:ScytherJungle10.jpg
+Snorlax,Normale,Rara,Base,90,Pellaccia,Body Slam,30,4 normale,,,,Lotta,psico - 30,3 qls,https://wiki.pokemoncentral.it/Snorlax_(Jungle_11)#/media/File:SnorlaxJungle11.jpg
+Vaporeon,Acqua,Rara,1,80,,Attacco Rapido,10+,2 normale,Pistola ad Acqua,30+,2 acqua 1 normale,Elettro,,1 qls,https://wiki.pokemoncentral.it/Vaporeon_(Jungle_12)#/media/File:VaporeonJungle.jpg
+Venomoth,Erba,Rara,1,70,Scambia,Polvere Velenosa,10,2 erba,,,,Fuoco,lotta - 30,,https://wiki.pokemoncentral.it/Venomoth_(Jungle_13)#/media/File:VenomothJungle13.jpg
+Victreebel,Erba,Rara,2,80,,Attrazione Letale,,1 erba,Secrezione Collosa,20,2 erba,Fuoco,,2 qls,https://wiki.pokemoncentral.it/Victreebel_(Jungle_14)#/media/File:VictreebelJungle14.jpg
+Vileplume,Erba,Rara,2,80,Cura,Petalodanza,40x,3 erba,,,,Fuoco,,2 qls,https://wiki.pokemoncentral.it/Vileplume_(Jungle_15)#/media/File:VileplumeJungle15.jpg
+Wigglytuff,Normale,Rara,1,80,,Ninna Nanna,,1 normale,Fare la Ola,10+,3 normale,Lotta,psico - 30,2 qls,https://wiki.pokemoncentral.it/Wigglytuff_(Jungle_16)#/media/File:WigglytuffJungle16.jpg
+Butterfree,Erba,Non Comune,2,70,,Turbine,20,2 normale,Megassorbimento,40,4 erba,Fuoco,lotta - 30,,https://wiki.pokemoncentral.it/Butterfree_(Jungle_33)#/media/File:ButterfreeJungle33.jpg
+Dodrio,Normale,Non Comune,1,70,Assistente alla Ritirata,Ira,10+,3 normale,,,,Elettro,lotta - 30,,https://wiki.pokemoncentral.it/Dodrio_(Jungle_34)#/media/File:DodrioJungle34.jpg
+Exeggutor,Erba,Non Comune,1,80,,Teletrasporto,,1 psico,Grande Ovosplosione,20x,1 normale,Fuoco,,3 qls,https://wiki.pokemoncentral.it/Exeggutor_(Jungle_35)#/media/File:ExeggutorJungle35.jpg
+Fearow,Normale,Non Comune,1,70,,Agilità,20,3 normale,Perforbecco,40,4 normale,Elettro,lotta - 30,,https://wiki.pokemoncentral.it/Fearow_(Jungle_36)#/media/File:FearowJungle36.jpg
+Gloom,Erba,Non Comune,1,60,,Velenpolvere,,1 erba,Puzza,20,2 erba,Fuoco,,1 qls,https://wiki.pokemoncentral.it/Gloom_(Jungle_37)#/media/File:GloomJungle37.jpg
+Lickitung,Normale,Non Comune,Base,90,,Lingua Avvolgente,10,1 normale,Supersonico,,2 normale,Lotta,psico - 30,3 qls,https://wiki.pokemoncentral.it/Lickitung_(Jungle_38)#/media/File:LickitungJungle38.jpg
+Marowak,Lotta,Non Comune,1,60,,Ossomerang,30x,2 lotta,Cerca Amici,,2 lotta 1 normale,Erba,elettro - 30,1 qls,https://wiki.pokemoncentral.it/Marowak_(Jungle_39)#/media/File:MarowakJungle39.jpg
+Nidorina,Erba,Non Comune,1,70,,Supersonico,,1 erba,Doppiocalcio,30x,1 erba 2 normale,Psico,,1 qls,https://wiki.pokemoncentral.it/Nidorina_(Jungle_40)#/media/File:NidorinaJungle40.jpg
+Parasect,Erba,Non Comune,1,60,,Spore,,2 erba,Lacerazione,30,3 normale,Fuoco,,1 qls,https://wiki.pokemoncentral.it/Parasect_(Jungle_41)#/media/File:ParasectJungle41.jpg
+Persian,Normale,Non Comune,1,70,,Graffio,20,2 normale,Balzo,30,3 normale,Lotta,psico - 30,,https://wiki.pokemoncentral.it/Persian_(Jungle_42)#/media/File:PersianJungle42.jpg
+Primeape,Lotta,Non Comune,1,70,,Sfuriate,20x,2 lotta,Collera,50,2 lotta 1 normale,Psico,,1 qls,https://wiki.pokemoncentral.it/Primeape_(Jungle_43)#/media/File:PrimeapeJungle43.jpg
+Rapidash,Fuoco,Non Comune,1,70,,Pestone,20+,2 normale,Agilità,30,2 fuoco 1 normale,Acqua,,,https://wiki.pokemoncentral.it/Rapidash_(Jungle_44)#/media/File:RapidashJungle44.jpg
+Rhydon,Lotta,Non Comune,1,100,,Incornata,30,1 lotta 2 normale,Cozzare,50,4 lotta,Erba,elettro - 30,3 qls,https://wiki.pokemoncentral.it/Rhydon_(Jungle_45)#/media/File:RhydonJungle45.jpg
+Seaking,Acqua,Non Comune,1,70,,Incornata,10,1 acqua,Cascata,30,1 acqua 1 normale,Elettro,,1 qls,https://wiki.pokemoncentral.it/Seaking_(Jungle_46)#/media/File:SeakingJungle46.jpg
+Tauros,Normale,Non Comune,Base,60,,Pestone,20+,2 normale,Infuriato,20+,3 normale,Lotta,psico - 30,2 qls,https://wiki.pokemoncentral.it/Tauros_(Jungle_47)#/media/File:TaurosJungle47.jpg
+Weepinbell,Erba,Non Comune,1,70,,Polvere Velenosa,10,1 erba,Foglielama,30,2 erba,Fuoco,,1 qls,https://wiki.pokemoncentral.it/Weepinbell_(Jungle_48)#/media/File:WeepinbellJungle48.jpg
+Bellsprout,Erba,Comune,Base,40,,Frustata,10,1 erba,Cerca Famiglia,,1 erba,Fuoco,,1 qls,https://media.pokemoncentral.it/wiki/c/cf/BellsproutJungle49.jpg
+Cubone,Lotta,Comune,Base,40,,Piagnisteo,,1 qls,Ira,10+,2 lotta,Erba,elettro - 30,1 qls,https://media.pokemoncentral.it/wiki/a/a6/CuboneJungle50.jpg
+Eevee,Normale,Comune,Base,50,,Codata,,1 qls,Attacco Rapido,10+,2 qls,Lotta,psico - 30,1 qls,https://media.pokemoncentral.it/wiki/b/bf/EeveeJungle.jpg
+Exeggcute,Erba,Comune,Base,50,,Ipnosi,,1 psico,Parassieme,20,2 erba,Fuoco,,1 qls,https://media.pokemoncentral.it/wiki/2/2b/ExeggcuteJungle52.jpg
+Goldeen,Acqua,Comune,Base,40,,Incornata,10,1 acqua,,,,Elettro,,,https://media.pokemoncentral.it/wiki/5/54/GoldeenJungle53.jpg
+Jigglypuff,Normale,Comune,Base,60,,Ninna Nanna,,1 qls,Libbra,20,2 qls,Lotta,psico - 30,1 qls,https://media.pokemoncentral.it/wiki/0/07/JigglypuffJungle54.jpg
+Mankey,Lotta,Comune,Base,30,Occhiata,Graffio,10,1 qls,,,,Psico,,,https://media.pokemoncentral.it/wiki/a/a8/MankeyJungle55.jpg
+Meowth,Normale,Comune,Base,50,,Giorno di Paga,10,2 qls,,,,Lotta,psico - 30,1 qls,https://media.pokemoncentral.it/wiki/f/fb/MeowthJungle56.jpg
+Nidoran,Erba,Comune,Base,60,,Sfuriate,10x,1 erba,Cerca Famiglia,,2 erba,Psico,,1 qls,https://media.pokemoncentral.it/wiki/9/90/NidoranJungle57.jpg
+Oddish,Erba,Comune,Base,50,,Spore Parallizzanti,10,1 erba,Germoglio,,2 erba,Fuoco,,1 qls,https://media.pokemoncentral.it/wiki/f/fd/OddishJungle58.jpg
+Paras,Erba,Comune,Base,40,,Graffio,20,2 qls,Spore,,2 erba,Fuoco,,1 qls,https://media.pokemoncentral.it/wiki/7/7c/ParasJungle59.jpg
+Pikachu,Elettro,Comune,Base,50,,Scintilla,20,2 elettro,,,,Lotta,,1 qls,https://media.pokemoncentral.it/wiki/6/6f/PikachuJungle60.png
+Rhyhorn,Lotta,Comune,Base,70,,Fulmisguardo,,1 qls,Incornata,30,1 lotta 2 qls,Erba,elettro - 30,3 qls,https://media.pokemoncentral.it/wiki/0/06/RhyhornJungle61.jpg
+Spearow,Normale,Comune,Base ,50,,Beccata,10,1 qls,Speculmossa,,3 qls,Elettro,elettro - 30,,https://media.pokemoncentral.it/wiki/9/90/SpearowJungle62.jpg
+Venonat,Erba,Comune,Base,40,,Spore Parallizzanti,10,1 erba,Sanguisuga,10,1 erba 1 qls,Fuoco,,1 qls,https://media.pokemoncentral.it/wiki/4/4c/VenonatJungle63.jpg
