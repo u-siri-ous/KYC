@@ -12,26 +12,26 @@ def find_rectangle(image_path):
 
     # Blur the grayscale image
     blurred = cv.bilateralFilter(gray, 10, 55, 55)
-    cv.imshow('blurred', blurred)
     
     # Apply edge detection (Canny algorithm)
     edges = cv.Canny(blurred, 50, 200)
-    cv.imshow('Edges', edges)
 
-    dilated = cv.dilate(edges, (3,3), iterations=3)
-    cv.imshow('dilated', dilated)
+    #dilated = cv.dilate(edges, (3,3), iterations=3)
     
     # Find contours
     contours, _ = cv.findContours(edges, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
     
     for contour in contours:
-        epsilon = 0.1 * cv.arcLength(contour, True)
-        approx = cv.approxPolyDP(contour, epsilon, True)
+        #epsilon = 0.1 * cv.arcLength(contour, True)
+        #approx = cv.approxPolyDP(contour, epsilon, True)
+        
+        x,y,w,h = cv.boundingRect(contour)
+        cv.rectangle(image,(x,y),(x+w,y+h),(0,0,255),2)
         
         # If the contour has four vertices, it's a rectangle
-        if len(approx) == 4:
-            # Draw the rectangle on the original image
-            cv.drawContours(image, [approx], 0, (0, 255, 0), 2)
+        #if len(approx) == 4:
+            #Draw the rectangle on the original image
+            #cv.drawContours(image, [approx], 0, (0, 255, 0), 2)
     
     # Display the image with the detected rectangle
     cv.imshow('Rectangle Detection', image)
