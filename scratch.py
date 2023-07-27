@@ -4,7 +4,7 @@ def find_rectangle(image_path):
     # Load the image
     image = cv.imread(image_path)
 
-    image = cv.resize(image, (750, 750))
+    image = cv.resize(image, (image.shape[1] // 3, image.shape[0] // 3))
     
     # Convert the image to grayscale
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
