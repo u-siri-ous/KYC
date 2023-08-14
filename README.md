@@ -3,8 +3,8 @@
 A game card grader and classifier for the AI Lab - CV & NLP final.
 
 Branch organization:
-- master: code
-- docs: not code, pdfs, papers
+- master: code, models
+- docs: not code, pdfs, papers and project report
 
 By:
 - Christian Bianchi &rarr; [Fascetta](https://github.com/Fascetta)
