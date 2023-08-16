@@ -6,15 +6,16 @@ import refine
 def process_image(path):
     try:
         # Get the refined image and vertices from the 'refine' module
-        refined_image, vertices = refine.detect_edges(path)
+        refined_image, vertices, network_input = refine.detect_edges(path)
 
         if refined_image is not None:
             # Show the refined image
             cv.imshow('Refined', refined_image)
+            cv.imshow('Neural network', network_input)
             cv.waitKey(0)
             cv.destroyAllWindows()
         else:
-            print(f"No object detected in {path}")
+            print(f"No object detected in '{path.split('/')[-1].split('.')[0]}'")
     except Exception as e:
         print(f"Error processing {path}: {e}")
 
@@ -23,8 +24,10 @@ def main():
     image_paths = [
         'src/test/photo.jpg',
         'src/test/machamp.jpeg',
-        'src/test/greve.jpeg',
-        'src/test/greve3.jpeg'
+        # 'src/test/greve.jpeg',
+        # 'src/test/greve3.jpeg',
+        'src/test/psyduck.jpg',
+        'src/test/pikachu2.jpg',
     ]
 
     for path in image_paths:

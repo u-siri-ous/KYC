@@ -23,14 +23,11 @@ def detect_edges(image_path):
         contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
         if len(contours) > 0:
-            # Get the bounding rectangle of the first contour (assuming only one contour is found)
-            x, y, w, h = cv.boundingRect(contours[0])
+            # Get the bounding rectangle of the largest contour
+            x, y, w, h = cv.boundingRect(max(contours, key=cv.contourArea))
 
-            # Draw a blue rectangle around the detected region on the mask
-            cv.rectangle(mask, (x, y), (x+w, y+h), (255, 0, 0), 2)
-
-            # Return the cropped region of the original image and the bounding rectangle coordinates
-            return mask[y:y+h, x:x+w], (x, y, w, h)
+            # Return the cropped region of the cropped mask and the bounding rectangle coordinates
+            return mask[y:y+h, x:x+w], (x, y, w, h), card[y:y+h, x:x+w][h//6 : h//2, w//8 : (8*w)//10]
         else:
             # Return None if no yellow object is detected
             return None, None
@@ -39,13 +36,3 @@ def detect_edges(image_path):
         # Handle any errors that may occur during the processing
         print("Error:", e)
         return None, None
-
-# Usage example:
-# cropped_image, bounding_rect = detect_and_crop_yellow_object("path_to_image.jpg")
-# if cropped_image is not None:
-#     cv.imshow('Cropped Image', cropped_image)
-#     cv.waitKey(0)
-#     cv.destroyAllWindows()
-#     print("Bounding Rectangle Coordinates:", bounding_rect)
-# else:
-#     print("No yellow object detected in the image.")
