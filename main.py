@@ -22,12 +22,12 @@ def process_image(path):
 def main():
     # List of image paths to process
     image_paths = [
-        'src/test/photo.jpg',
-        'src/test/machamp.jpeg',
-        # 'src/test/greve.jpeg',
-        # 'src/test/greve3.jpeg',
+        'src/test/weedle.jpg',
+        'src/test/machamp.jpg',
+        # 'src/test/greve.jpg',
+        # 'src/test/greve3.jpg',
         'src/test/psyduck.jpg',
-        'src/test/pikachu2.jpg',
+        'src/test/pikachu.jpg',
     ]
 
     for path in image_paths:
