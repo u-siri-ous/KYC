@@ -3,6 +3,7 @@ import numpy as np
 
 import refine
 from expansion import findexp
+import grader
 
 def process_image(path):
     try:
@@ -45,6 +46,7 @@ def main():
     ]
 
     for path in image_paths:
+        grader.centering(path)
         process_image(path)
 
 if __name__ == "__main__":
