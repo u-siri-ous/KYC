@@ -26,8 +26,11 @@ def detect_edges(image_path):
             # Get the bounding rectangle of the largest contour
             x, y, w, h = cv.boundingRect(max(contours, key=cv.contourArea))
 
+            # Saving image to perform calculations
+            # cv.imwrite("cropped_card.jpg", card[y:y+h, x:x+w])
+
             # Return the cropped region of the cropped mask and the bounding rectangle coordinates
-            return mask[y:y+h, x:x+w], (x, y, w, h), card[y:y+h, x:x+w][h//6 : h//2, w//8 : (8*w)//10]
+            return mask[y:y+h, x:x+w], (x, y, w, h), card[y:y+h, x:x+w][h//6 : h//2, w//8 : (8*w)//10], card[y:y+h, x:x+w][h//2 : (5*h)//8 , (5*w)//6 : (16*w)//17]
         else:
             # Return None if no yellow object is detected
             return None, None

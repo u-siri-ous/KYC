@@ -2,16 +2,19 @@ import cv2 as cv
 import numpy as np
 
 import refine
+from expansion import findexp
 
 def process_image(path):
     try:
         # Get the refined image and vertices from the 'refine' module
-        refined_image, vertices, network_input = refine.detect_edges(path)
+        refined_image, vertices, network_input, symbol = refine.detect_edges(path)
+        detected_symbol = findexp(symbol)
 
         if refined_image is not None:
             # Show the refined image
-            cv.imshow('Refined', refined_image)
-            cv.imshow('Neural network', network_input)
+            #cv.imshow('Refined', refined_image)
+            #cv.imshow('Neural network', network_input)
+            cv.imshow('Symbol', symbol)
             cv.waitKey(0)
             cv.destroyAllWindows()
         else:
@@ -22,12 +25,23 @@ def process_image(path):
 def main():
     # List of image paths to process
     image_paths = [
-        'src/test/photo.jpg',
-        'src/test/machamp.jpeg',
-        # 'src/test/greve.jpeg',
-        # 'src/test/greve3.jpeg',
+        #-----BASE-----
+        'src/test/weedle.jpg',
+        'src/test/machamp.jpg',
+        'src/test/machoke.jpg',
+        #'src/test/ponyta.jpg', #problematico con le coordinate
+        'src/test/vulpix.jpg',
+        'src/test/staryu.jpg',
+        #-----FOSSIL-----
         'src/test/psyduck.jpg',
-        'src/test/pikachu2.jpg',
+        'src/test/krabby.jpeg', # si incasina con lo sharpen
+        'src/test/geodude.jpeg', #foderina
+        #'src/test/grimer.jpeg', #problematico con le coordinate, foderina
+        #-----JUNGLE-----
+        'src/test/pikachu.jpg',
+        'src/test/electrode.jpeg', #foderina
+        'src/test/kangaskhan.jpeg', #foderina
+        'src/test/mankey.jpeg' #foderina
     ]
 
     for path in image_paths:
