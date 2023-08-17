@@ -2,8 +2,8 @@ import cv2 as cv
 import numpy as np
 
 data = []
-jungle = cv.imread('src/test/expansions/jungle.jpg')
-fossil = cv.imread('src/test/expansions/fossil.jpg')    #this image in png is featureless
+jungle = cv.imread('images/expansions/jungle.jpg')
+fossil = cv.imread('images/expansions/fossil.jpg')    #this image in png is featureless
 data.append(jungle)
 data.append(fossil)
 
@@ -22,7 +22,7 @@ def findexp(symbol):
     #cv.imshow('sharpened', sharpened)
     #dark = cv.addWeighted(sharpened, contrast, sharpened, 0, brightness)
     #gray = cv.cvtColor(sharpened, cv.COLOR_BGR2GRAY)
-    cv.imshow('dark/sharp', sharpened)
+    # cv.imshow('dark/sharp', sharpened)
     classID = classify_exp(sharpened, descriptors)
     print(classes[classID])
     return classes[classID]

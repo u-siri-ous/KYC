@@ -33,7 +33,7 @@ def kyc():
         instructions.place_forget()
         input_form.place_forget()
         kyc_button.place_forget()
-        here_it_is=tk.PhotoImage(file="images\Logo_placeholder.png") #da sostituire con scritta here's your card! con font bellini che riprendono il logo 
+        here_it_is=tk.PhotoImage(file="images/GUI/Logo_placeholder.png") #da sostituire con scritta here's your card! con font bellini che riprendono il logo 
         Heres_your_card=tk.Label(upper_frame,image=here_it_is)
         Heres_your_card.image=here_it_is
         Heres_your_card.place(relx=0.5,rely=0.5,anchor="center")
@@ -113,7 +113,7 @@ another_frame.pack()
 
 #Structure of the start frame
 #Structure of the logo button
-logo=tk.PhotoImage(file="images\Logo_placeholder.png")
+logo=tk.PhotoImage(file="images/GUI/Logo_placeholder.png")
 logo_button=tk.Button(starting_frame,image=logo ,command=start, borderwidth=0)
 logo_button.place(relx=0.5,rely=0.5, anchor="center")
 

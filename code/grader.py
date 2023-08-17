@@ -64,7 +64,7 @@ def calculate_dimensions(image, middle_x, middle_y):
 
 def centering(image_path):
     # Load the image
-    image, _ = detect_edges(image_path)
+    image, _, _, _ = detect_edges(image_path)
 
     # Calculate the middle point
     middle_x = image.shape[1] // 2
@@ -92,4 +92,4 @@ def centering(image_path):
     print()
 
 if __name__ == "__main__":
-    centering()
+    pass

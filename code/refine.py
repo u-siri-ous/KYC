@@ -33,9 +33,9 @@ def detect_edges(image_path):
             return mask[y:y+h, x:x+w], (x, y, w, h), card[y:y+h, x:x+w][h//6 : h//2, w//8 : (8*w)//10], card[y:y+h, x:x+w][h//2 : (5*h)//8 , (5*w)//6 : (16*w)//17]
         else:
             # Return None if no yellow object is detected
-            return None, None
+            return None, None, None, None
 
     except Exception as e:
         # Handle any errors that may occur during the processing
         print("Error:", e)
-        return None, None
+        return None, None, None, None
