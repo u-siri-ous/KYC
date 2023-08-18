@@ -1,15 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
-from PIL import ImageTk,Image
-root = tk.Tk()
-root.title("KYC")
-root.geometry("800x600")
-#root.iconbitmap("icona") Quando avremo un'icona inserirla qui
+from PIL import ImageTk, Image
 
 def start():
-    a_notebook.add(card_depiction_frame,text="Card", state="normal")
-    a_notebook.select(1)
+    a_notebook.tab(card_depiction_frame, state="normal")
+    a_notebook.select(card_depiction_frame)
 
+''' Nicola's function that ChatGPT cancelled but it doesn't run yet so we don't know if it works
 def kyc():
     if input_form.get().endswith('.jpg'):
         kyc_button.config(state="disabled")
@@ -39,90 +36,115 @@ def kyc():
         Heres_your_card.place(relx=0.5,rely=0.5,anchor="center")
     else:
         pass
+'''
 
-
-    
-
+def kyc():
+    image_path = input_form.get()
+    if image_path.endswith('.jpg'):
+        kyc_button.config(state="disabled")
+        
+        new_pokemon = Image.open(image_path)
+        resized = new_pokemon.resize((300, 375), Image.ANTIALIAS)
+        card_pic = ImageTk.PhotoImage(resized)
+        
+        # image_label.configure(image=card_pic) to be uncommented 
+        # image_label.image = card_pic          to be uncommented
+        
+        # Create and place the grading labels
+        
+        input_form.delete(0, 'end')
+        instructions.place_forget()
+        input_form.place_forget()
+        kyc_button.place_forget()
+        
+        # Place the final card label
+        
+    else:
+        pass
 
 def home():
-    a_notebook.select(0)
-    a_notebook.hide(1)
+    a_notebook.select(starting_frame)
+    a_notebook.tab(card_depiction_frame, state="hidden")
 
+# Initialize the main application
+root = tk.Tk()
+root.title("KYC")
+root.geometry("800x800")
+root.iconbitmap("images\GUI\Logo_wind.ico")
 
-#Creates the notebook to switch between frames
-a_notebook=ttk.Notebook(root)
-a_notebook.pack()
+# Notebook initialization
+a_notebook = ttk.Notebook(root)
+a_notebook.pack(fill="both", expand=1)
 
-#Generate and pack said frames
-starting_frame=tk.Frame(a_notebook,width=800,height=600)
-card_depiction_frame=tk.Frame(a_notebook,width=800,height=600)
-starting_frame.pack(fill="both",expand=1)
-card_depiction_frame.pack(fill="both",expand=1)
+# Frame initialization
+starting_frame = tk.Frame(a_notebook, width=800, height=800)
+card_depiction_frame = tk.Frame(a_notebook, width=800, height=800)
+starting_frame.pack(fill="both", expand=1)
+card_depiction_frame.pack(fill="both", expand=1)
 
-#Adding the frames to the notebook:the card depiction one is there but hidden
-a_notebook.add(starting_frame,text="Start")
-a_notebook.add(card_depiction_frame,text="Card", state="hidden")
+# Adding frames to the notebook
+a_notebook.add(starting_frame, text="Start")
+a_notebook.add(card_depiction_frame, text="Card")
+a_notebook.tab(card_depiction_frame, state="hidden")
 
-#Structure of the input form
-upper_frame=tk.LabelFrame(card_depiction_frame,height=115,width=800,border=0)
-upper_frame.place(relx=0,rely=0)
-instructions=tk.Label(upper_frame, text="Insert the path to the image of the card you want to analyze and then click the button below")
-instructions.place(relx=0.5,rely=0.2,anchor="center")
-input_form=tk.Entry(upper_frame,width=100)
-input_form.place(relx=0.5,rely=0.45,anchor="center")
-kyc_button=tk.Button(upper_frame,text="KYC",command=kyc,padx=5,pady=5)
-kyc_button.place(relx=0.5,rely=0.8,anchor="center")
-home_button=tk.Button(card_depiction_frame,text='HOME',command=home)
-home_button.place(relx=0.003,rely=0.997,anchor="sw")
+# Structure of the input form
+upper_frame = tk.LabelFrame(card_depiction_frame, height=115, width=800, border=0)
+upper_frame.place(relx=0, rely=0)
+instructions = tk.Label(upper_frame, text="Insert the path to the image of the card you want to analyze and then click the button below")
+instructions.place(relx=0.5, rely=0.2, anchor="center")
+input_form = tk.Entry(upper_frame, width=100)
+input_form.place(relx=0.5, rely=0.45, anchor="center")
+kyc_button = tk.Button(upper_frame, text="KYC", command=kyc, padx=5, pady=5)
+kyc_button.place(relx=0.5, rely=0.8, anchor="center")
+home_button = tk.Button(card_depiction_frame, text='HOME', command=home)
+home_button.place(relx=0.003, rely=0.997, anchor="sw")
 
-#Structure of the frames in the card depiction page
-card_frame=tk.LabelFrame(card_depiction_frame,height=400,width=300,border=0)
-card_frame.place(relx=0.003,rely=0.95,anchor="sw")
-vote_frame=tk.LabelFrame(card_depiction_frame,height=50,width=300,border=2)
-vote_frame.place(relx=0.003,rely=0.2,anchor="nw")
-description_frame=tk.LabelFrame(card_depiction_frame,height=430,width=495,border=1)
-description_frame.place(relx=0.378,rely=0.2,anchor="nw")
+# Structure of the frames in the card depiction page
+card_frame = tk.LabelFrame(card_depiction_frame, height=400, width=300, border=0)
+card_frame.place(relx=0.003, rely=0.95, anchor="sw")
+vote_frame = tk.LabelFrame(card_depiction_frame, height=50, width=300, border=2)
+vote_frame.place(relx=0.003, rely=0.2, anchor="nw")
+description_frame = tk.LabelFrame(card_depiction_frame, height=430, width=495, border=1)
+description_frame.place(relx=0.378, rely=0.2, anchor="nw")
 
-#Frames in the vote frame
-#Frames for each individual vote
-centering_frame=tk.LabelFrame(vote_frame,width=125,height=25,border=0)
-centering_frame.place(relx=0,rely=0,anchor="nw")
-edges_frame=tk.LabelFrame(vote_frame,width=125,height=25,border=0)
-edges_frame.place(relx=0,rely=1,anchor="sw")
-corners_frame=tk.LabelFrame(vote_frame,width=125,height=25,border=0)
-corners_frame.place(relx=0.4166,rely=0,anchor="nw")
-surface_frame=tk.LabelFrame(vote_frame,width=125,height=25,border=0)
-surface_frame.place(relx=0.4166,rely=1,anchor="sw")
-#Frame for the mean aka final vote
-mean_frame=tk.LabelFrame(vote_frame,width=50,height=45,border=0)
-mean_frame.place(relx=0.8332,rely=0,anchor="nw")
+# Frames in the vote frame
+# Frames for each individual vote
+centering_frame = tk.LabelFrame(vote_frame, width=125, height=25, border=0)
+centering_frame.place(relx=0, rely=0, anchor="nw")
+edges_frame = tk.LabelFrame(vote_frame, width=125, height=25, border=0)
+edges_frame.place(relx=0, rely=1, anchor="sw")
+corners_frame = tk.LabelFrame(vote_frame, width=125, height=25, border=0)
+corners_frame.place(relx=0.4166, rely=0, anchor="nw")
+surface_frame = tk.LabelFrame(vote_frame, width=125, height=25, border=0)
+surface_frame.place(relx=0.4166, rely=1, anchor="sw")
+# Frame for the mean aka final vote
+mean_frame = tk.LabelFrame(vote_frame, width=50, height=45, border=0)
+mean_frame.place(relx=0.8332, rely=0, anchor="nw")
 
-#Structure of the description frame
-name_frame=tk.LabelFrame(description_frame,height=50,width=495)
+# Structure of the description frame
+name_frame = tk.LabelFrame(description_frame, height=50, width=495)
 name_frame.pack()
-ability_frame=tk.LabelFrame(description_frame,height=129,width=300)
+ability_frame = tk.LabelFrame(description_frame, height=129, width=300)
 ability_frame.pack()
-moves_frame=tk.LabelFrame(description_frame,height=129,width=300)
+moves_frame = tk.LabelFrame(description_frame, height=129, width=300)
 moves_frame.pack()
-weakness_frame=tk.LabelFrame(description_frame,height=129,width=495)
+weakness_frame = tk.LabelFrame(description_frame, height=129, width=495)
 weakness_frame.pack()
-another_frame=tk.LabelFrame(description_frame,height=258,width=195)
+another_frame = tk.LabelFrame(description_frame, height=258, width=195)
 another_frame.pack()
-#PROBLEMA DA RISOLVERE: se lo metto nella grid mi sfancula tutto
 
+# Structure of the start frame
+logo = tk.PhotoImage(file="images/GUI/Logo_res.png")
+logo_button = tk.Button(starting_frame, image=logo, command=start, borderwidth=0)
+logo_button.place(relx=0.5, rely=0.5, anchor="center")
 
-#Structure of the start frame
-#Structure of the logo button
-logo=tk.PhotoImage(file="images/GUI/Logo_placeholder.png")
-logo_button=tk.Button(starting_frame,image=logo ,command=start, borderwidth=0)
-logo_button.place(relx=0.5,rely=0.5, anchor="center")
+# Descriptive label
+to_start = tk.Label(starting_frame, text="To get to know your card click the logo above")
+to_start.place(relx=0.5, rely=0.65, anchor="center")
 
-#Descriptive label
-to_start=tk.Label(starting_frame,text="To get to know your card click the logo above")
-to_start.place(relx=0.5,rely=0.65,anchor="center")
+# Credits label
+credits_lbl = tk.Label(text="A project by Bianchi Christian, Mastrorilli Nicola, Ramil Leonard Vincent, Sannino Siria")
+credits_lbl.place(relx=0.997, rely=0.997, anchor='se')
 
-#Credits label
-credits_lbl=tk.Label(text="A project by Bianchi Christian, Mastrorilli Nicola, Ramil Leonard Vincent, Sannino Siria")
-credits_lbl.place(relx=0.997,rely=0.997, anchor='se')
+# Start the application's main loop
 root.mainloop()
-
