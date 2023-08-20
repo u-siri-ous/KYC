@@ -13,6 +13,7 @@ def process_single_image(image_path):
             # Show the refined image
             cv.imshow('Refined', refined_image)
             cv.imshow('Neural network', network_input)
+            cv.imwrite('Pok.png', network_input)
             cv.imshow('Symbol', symbol)
             cv.waitKey(0)
             cv.destroyAllWindows()
@@ -30,6 +31,31 @@ def process_image_paths(image_paths):
 def main():
     # List of image paths to process
     image_paths = [
+        #'images/test/electrode.jpeg' 
+        #'images/test/geodude.jpeg'
+        #'images/test/pikachu.jpg'
+        #'images/test/kangaskhan.jpeg'
+        #'images/test/machamp.jpg' #NO
+        'images/test/machoke.jpg'
+        #'images/test/ponyta.jpg'
+        #'images/test/psyduck.jpg'
+        #'images/test/staryu.jpg'
+        #'images/test/vulpix.jpg'
+        #'images/test/weedle.jpg'
+        #'images/test/mankey.jpeg'
+        #'images/test/krabby.jpeg'
+        #'cards/jungle_test/vaporeon_test.png'
+        #'cards/Fossil/aerodactyl.png'
+        #'/Users/leonardvincentramil/Desktop/BaseCards/Blastoice_card.png'
+        #'/Users/leonardvincentramil/Documents/GitHub/KYC/cards/jungle_test/nidoran_f_test.png'
+    ]
+
+    process_image_paths(image_paths)
+
+if __name__ == "__main__":
+    main()
+
+'''
         'images/test/electrode.jpeg',  #-----JUNGLE-----  foderina
         'images/test/geodude.jpeg',    #-----FOSSIL-----  foderina
         'images/test/grimer.jpeg',     #-----FOSSIL-----, problematico con le coordinate, foderina
@@ -38,15 +64,10 @@ def main():
         'images/test/machamp.jpg',     #------BASE------
         'images/test/machoke.jpg',     #------BASE------
         'images/test/mankey.jpeg',     #-----JUNGLE-----, foderina
-        'images/test/pikachu.jpg',     #-----JUNGLE-----
         'images/test/ponyta.jpg',      #------BASE------, problematico con le coordinate
         'images/test/psyduck.jpg',     #-----FOSSIL-----
         'images/test/staryu.jpg',      #------BASE------
         'images/test/vulpix.jpg',      #------BASE------
         'images/test/weedle.jpg',      #------BASE------
-    ]
-
-    process_image_paths(image_paths)
-
-if __name__ == "__main__":
-    main()
+        'images/test/pikachu.jpg',     #-----JUNGLE-----
+'''
