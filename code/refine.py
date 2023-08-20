@@ -18,6 +18,7 @@ def detect_edges(image_path):
 
         # Create a binary mask where pixels falling within the yellow color range become white (255) and others black (0)
         mask = cv.inRange(hsv_image, lower_yellow, upper_yellow)
+        #cv.imshow("mask",mask)
 
         # Find contours in the binary mask
         contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)

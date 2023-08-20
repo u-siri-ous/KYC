@@ -36,7 +36,8 @@ def main():
         #'images/test/pikachu.jpg'
         #'images/test/kangaskhan.jpeg'
         #'images/test/machamp.jpg' #NO
-        'images/test/machoke.jpg'
+        #'images/test/grimer.jpeg'
+        #'images/test/machoke.jpg'
         #'images/test/ponyta.jpg'
         #'images/test/psyduck.jpg'
         #'images/test/staryu.jpg'
@@ -45,7 +46,7 @@ def main():
         #'images/test/mankey.jpeg'
         #'images/test/krabby.jpeg'
         #'cards/jungle_test/vaporeon_test.png'
-        #'cards/Fossil/aerodactyl.png'
+        #'cards/Fossil/grimer.png' #worst case non funziona un c
         #'/Users/leonardvincentramil/Desktop/BaseCards/Blastoice_card.png'
         #'/Users/leonardvincentramil/Documents/GitHub/KYC/cards/jungle_test/nidoran_f_test.png'
     ]
