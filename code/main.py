@@ -1,19 +1,18 @@
 import cv2 as cv
-import refine
-from expansion import findexp
-import grader
+from grader.valutator import grading
+from grader.refine import detect_edges
 
 def process_single_image(image_path):
     try:
         # Get the refined image and vertices from the 'refine' module
-        refined_image, vertices, network_input, symbol = refine.detect_edges(image_path)
+        refined_image, vertices, network_input, symbol = detect_edges(image_path)
         # detected_symbol = findexp(symbol)
 
         if refined_image is not None:
             # Show the refined image
             cv.imshow('Refined', refined_image)
-            cv.imshow('Neural network', network_input)
-            cv.imwrite('Pok.png', network_input)
+            cv.imshow('Neural input', network_input)
+            cv.imwrite('code/neuralInput.png', network_input)
             cv.imshow('Symbol', symbol)
             cv.waitKey(0)
             cv.destroyAllWindows()
@@ -24,27 +23,27 @@ def process_single_image(image_path):
 
 def process_image_paths(image_paths):
     for path in image_paths:
-        grader.centering(path)
+        grading(path)
         process_single_image(path)
         pass
 
 def main():
     # List of image paths to process
     image_paths = [
-        #'images/test/electrode.jpeg' 
-        #'images/test/geodude.jpeg'
-        #'images/test/pikachu.jpg'
-        #'images/test/kangaskhan.jpeg'
-        #'images/test/machamp.jpg' #NO
-        #'images/test/grimer.jpeg'
-        #'images/test/machoke.jpg'
-        #'images/test/ponyta.jpg'
-        #'images/test/psyduck.jpg'
-        #'images/test/staryu.jpg'
-        #'images/test/vulpix.jpg'
-        #'images/test/weedle.jpg'
-        #'images/test/mankey.jpeg'
-        #'images/test/krabby.jpeg'
+        'images/grader_test/electrode.jpeg' 
+        #'images/grader_test/geodude.jpeg'
+        #'images/grader_test/pikachu.jpg'
+        #'images/grader_test/kangaskhan.jpeg'
+        #'images/grader_test/machamp.jpg'
+        #'images/grader_test/grimer.jpeg'
+        #'images/grader_test/machoke.jpg'
+        #'images/grader_test/ponyta.jpg'
+        #'images/grader_test/psyduck.jpg'
+        #'images/grader_test/staryu.jpg'
+        #'images/grader_test/vulpix.jpg'
+        #'images/grader_test/weedle.jpg'
+        #'images/grader_test/mankey.jpeg'
+        #'images/grader_test/krabby.jpeg'
         #'cards/jungle_test/vaporeon_test.png'
         #'cards/Fossil/grimer.png' #worst case non funziona un c
         #'/Users/leonardvincentramil/Desktop/BaseCards/Blastoice_card.png'
