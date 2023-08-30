@@ -1,10 +1,14 @@
-# [KYC - Know Your Cards](https://docs.google.com/document/d/15KSVZAqyA_GNhRiiGIvUCIxvTrStHTObt-v6eMBhtZU/edit)
+# KYC - Know Your Cards
 
-A game card grader and classifier for the AI Lab - CV & NLP final.
+<!--(https://docs.google.com/document/d/15KSVZAqyA_GNhRiiGIvUCIxvTrStHTObt-v6eMBhtZU/edit)-->
 
-Branch organization:
-- master: code, models
-- docs: not code, pdfs, papers and project report
+### A game card grader and classifier for the AI Lab - CV & NLP final.
+
+In this branch you'll find:
+- Code
+- Models
+- GUI
+- Datasets
 
 By:
 - Christian Bianchi &rarr; [Fascetta](https://github.com/Fascetta)
@@ -12,11 +16,11 @@ By:
 - Leonard Vincent Ramil &rarr; [leozzzoo](https://github.com/leozzzoo)
 - Siria Sannino &rarr; [u-siri-ous](https://github.com/u-siri-ous)
 
-Research: Articles, papers, notes, and references.
+<!--Research: Articles, papers, notes, and references.
 Documents: Project proposal, outlines, drafts, and presentations.
 Data: Raw data, datasets, spreadsheets, and other data files.
 Code: Source code, scripts, and programming-related files.
 Images: Visual assets, diagrams, graphs, and images.
-Resources: Any additional resources like fonts, templates, or external files.
+Resources: Any additional resources like fonts, templates, or external files.-->
 
 <3
