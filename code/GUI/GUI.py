@@ -2,13 +2,18 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
 
+'''
 def start():
     a_notebook.tab(card_depiction_frame, state="normal")
     a_notebook.select(card_depiction_frame)
-
+'''
+    
 #Nicola's command that ChatGPT cancelled but it doesn't run yet so we don't know if it works
-def kyc(refined_image, cen, cor, edg, sur):
-        resized=refined_image.resize((300,375))
+def kyc(cen, cor, edg, sur):
+        a_notebook.tab(card_depiction_frame, state="normal")
+        a_notebook.select(card_depiction_frame)
+        card = Image.open("code/card.jpg")
+        resized=card.resize((300,375))
         card_pic=ImageTk.PhotoImage(resized)
         image_label=tk.Label(card_frame,image=card_pic)
         image_label.image=card_pic #Very important to display the photo correctly
@@ -38,7 +43,11 @@ def set_base_toggle():
         logo_button.configure(state="normal")
      else:
          logo_button.configure(state='disabled')
-        
+     
+     
+          
+
+    
 def fossil_toggle():
      fossil_checkbox.toggle()
      jungle_checkbox.deselect()
@@ -48,6 +57,7 @@ def fossil_toggle():
      else:
          logo_button.configure(state='disabled')
      
+
 def jungle_toggle():
      jungle_checkbox.toggle()
      fossil_checkbox.deselect()
@@ -127,7 +137,7 @@ weakness_frame.place(relx=0,rely=0.75,relheight=0.25,relwidth=1,anchor='nw')
 logo = Image.open("images/GUI/Logo_res.png")
 resized_logo=logo.resize((400,400))
 new_logo=ImageTk.PhotoImage(resized_logo)
-logo_button = tk.Button(starting_frame, image=new_logo, command=start, borderwidth=0,state="disabled")
+logo_button = tk.Button(starting_frame, image=new_logo, command=kyc(0,0,0,0), borderwidth=0,state="disabled")
 logo_button.place(relx=0.5, rely=0.4, anchor="center")
 var1=tk.IntVar()
 set_base_checkbox=tk.Checkbutton(starting_frame,variable=var1,border=0,state="disabled",relief="flat")
