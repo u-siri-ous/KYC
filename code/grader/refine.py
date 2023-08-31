@@ -31,7 +31,7 @@ def detect_edges(image_path):
             # cv.imwrite("cropped_card.jpg", card[y:y+h, x:x+w])
 
             # Return the cropped region of the cropped mask and the bounding rectangle coordinates
-            return mask[y:y+h, x:x+w], (x, y, w, h), card[y:y+h, x:x+w][h//6 : h//2, w//8 : (8*w)//10], card[y:y+h, x:x+w][h//2 : (h*3)//5 , (w*5)//6 : (w*19)//20]
+            return mask[y:y+h, x:x+w], card[y:y+h, x:x+w], card[y:y+h, x:x+w][h//6 : h//2, w//8 : (8*w)//10], card[y:y+h, x:x+w][h//2 : (h*3)//5 , (w*5)//6 : (w*19)//20]
         else:
             # Return None if no yellow object is detected
             return None, None, None, None
