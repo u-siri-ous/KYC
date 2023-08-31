@@ -15,7 +15,7 @@ def kyc():
         card_pic=ImageTk.PhotoImage(resized)
         image_label=tk.Label(card_frame,image=card_pic)
         image_label.image=card_pic #Very important to display the photo correctly
-        image_label.pack()
+        image_label.place(relx=0.5,rely=0.5,anchor='center')
         centering_label=tk.Label(centering_frame,text="Centering    ") #to be filled by the output of the grading
         centering_label.place(relx=0.1,rely=0.5,anchor="w")
         edges_label=tk.Label(edges_frame,text="Edges    ")  #to be filled by the output of the grading
@@ -36,32 +36,7 @@ def kyc():
         Heres_your_card.place(relx=0.5,rely=0.5,anchor="center")
     else:
         pass
-
-'''
-def kyc():
-    image_path = input_form.get()
-    if image_path.endswith('.jpg'):
-        kyc_button.config(state="disabled")
-        
-        new_pokemon = Image.open(image_path)
-        resized = new_pokemon.resize((300, 375), Image.ANTIALIAS)
-        card_pic = ImageTk.PhotoImage(resized)
-        
-        # image_label.configure(image=card_pic) to be uncommented 
-        # image_label.image = card_pic          to be uncommented
-        
-        # Create and place the grading labels
-        
-        input_form.delete(0, 'end')
-        instructions.place_forget()
-        input_form.place_forget()
-        kyc_button.place_forget()
-        
-        # Place the final card label
-        
-    else:
-        pass
-'''
+    
 def home():
     a_notebook.select(starting_frame)
     a_notebook.tab(card_depiction_frame, state="hidden")
@@ -69,7 +44,7 @@ def home():
 # Initialize the main application
 root = tk.Tk()
 root.title("KYC")
-root.geometry("800x600")
+root.geometry("850x600")
 root.iconbitmap("images\GUI\Logo_wind.ico")
 
 # Notebook initialization
@@ -100,7 +75,7 @@ home_button = tk.Button(card_depiction_frame, text='HOME', command=home)
 home_button.place(relx=0.003, rely=0.997, anchor="sw")
 
 # Structure of the frames in the card depiction page
-card_frame = tk.LabelFrame(card_depiction_frame, border=0,background='orange')
+card_frame = tk.LabelFrame(card_depiction_frame, border=0,background='#2a75bb')
 card_frame.place(relx=0, rely=0.3, relwidth=0.35,relheight=0.65, anchor="nw")
 vote_frame = tk.LabelFrame(card_depiction_frame, height=50, width=300, border=2)
 vote_frame.place(relx=0, rely=0.2, relwidth=0.35,relheight=0.1, anchor="nw")
