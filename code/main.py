@@ -16,6 +16,7 @@ def process_single_image(image_path):
             cv.imshow('Symbol', symbol)
             cv.waitKey(0)
             cv.destroyAllWindows()
+            return refined_image, network_input
         else:
             print(f"No object detected in '{image_path.split('/')[-1].split('.')[0]}'")
     except Exception as e:
@@ -23,8 +24,10 @@ def process_single_image(image_path):
 
 def process_image_paths(image_paths):
     for path in image_paths:
-        grading(path)
-        process_single_image(path)
+        cen, cor, edg, sur = grading(path)
+        refined_image, network_input = process_single_image(path)
+        # nnFunction(network_input)
+        # kyc(refined_image, cen, cor, edg, sur)
         pass
 
 def main():

@@ -2,9 +2,10 @@ import cv2 as cv
 from grader.refine import detect_edges
 
 def grading(path):
-    cen = centering(path)
-    cor = corners(path)
-    edg = edges(path)
+    image, _, _, _ = detect_edges(path)
+    cen = centering(image)
+    cor = corners(image)
+    edg = edges(image)
     sur = (cen + cor + edg)//3
 
     print(f"Centering: {cen}")
@@ -76,10 +77,7 @@ def borders(image):
 
     return left, right, up, down
 
-def centering(image_path):
-    # Load the image
-    image, _, _, _ = detect_edges(image_path)
-
+def centering(image):
     left, right, up, down = borders(image)
 
     # print('left:', left)
@@ -87,8 +85,6 @@ def centering(image_path):
     # print('up:', up)
     # print('down:', down)
 
-    # Calculate and display ratios
-    print(f"{image_path.split('/')[-1].split('.')[0]}:")
 
     if left < right:
         # print('Orizzontal ratio:', int((left / right)*10))
@@ -112,9 +108,7 @@ def white_pixeles(corner):
     percentage_white_pixels = (white_pixel_count / total_pixels) * 10
     return int(percentage_white_pixels + 1)
 
-def corners(image_path):
-    # Load the image
-    image, _, _, _ = detect_edges(image_path)
+def corners(image):
     left, right, up, down = borders(image)
     height, width = image.shape
 
@@ -137,9 +131,7 @@ def corners(image_path):
     # print()
     return (tl + tr + bl + br)//4
 
-def edges(image_path):
-    # Load the image
-    image, _, _, _ = detect_edges(image_path)
+def edges(image):
     left, right, up, down = borders(image)
     height, width = image.shape
 
