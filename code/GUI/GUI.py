@@ -77,139 +77,16 @@ def GUI(cen, cor, edg, sur):
     a_notebook = ttk.Notebook(root)
     a_notebook.pack(fill="both", expand=1)
 
+
     # Frame initialization
     starting_frame = tk.Frame(a_notebook, width=850, height=700)
     card_depiction_frame = tk.Frame(a_notebook, width=850, height=700)
     starting_frame.pack(fill="both", expand=1)
     card_depiction_frame.pack(fill="both", expand=1)
 
-# Structure of the input form
-    upper_frame = tk.Frame(card_depiction_frame, border=0,background="red")
-    upper_frame.place(relx=0, rely=0,relwidth=1, relheight=0.2)
-    here_it_is=tk.PhotoImage(file="images/GUI/Logo.png") #da sostituire con scritta here's your card! con font bellini che riprendono il logo 
-    heres_your_card=tk.Label(upper_frame,image=here_it_is)
-    heres_your_card.image=here_it_is
-    heres_your_card.place(relx=0.5,rely=0.5,anchor="center")
-
-    # Structure of the frames in the card depiction page
-    card_frame = tk.Frame(card_depiction_frame, border=0,background='#2a75bb')
-    card_frame.place(relx=0, rely=0.3, relwidth=0.35,relheight=0.65, anchor="nw")
-
-    vote_frame = tk.Frame(card_depiction_frame, height=50, width=300, border=2)
-    vote_frame.place(relx=0, rely=0.2, relwidth=0.35,relheight=0.1, anchor="nw")
-
-    #Name frame 
-    name_frame=tk.Frame(card_depiction_frame)
-    name_frame.place(relx=0.35,rely=0.2, relheight=0.1,relwidth=0.65,anchor='nw')
-
-    #Frames in name frame
-    inner_name_frame=tk.Frame(name_frame)
-    inner_name_frame.place(relx= 0,rely=0,relheight=1,relwidth=0.333)
-    set_frame=tk.Frame(name_frame)
-    set_frame.place(relx=0.333,rely=0,relheight=1,relwidth=0.333)
-    pv_frame=tk.Frame(name_frame)
-    pv_frame.place(relx=0.666,rely=0,relheight=0.5,relwidth=0.333)
-    type_frame=tk.Frame(name_frame)
-    type_frame.place(relx=0.666,rely=0.5,relheight=0.5,relwidth=0.333)
-    #Description frame:
-    description_frame = tk.Frame(card_depiction_frame, border=1)
-    description_frame.place(relx=0.35, rely=0.3, relheight=0.65,relwidth=0.65, anchor="nw")
-
-    # Frames in the vote frame
-    # Frames for each individual vote
-    centering_frame = tk.Frame(vote_frame,  border=0)
-    centering_frame.place(relx=0, rely=0,relheight=0.5,relwidth=0.4, anchor="nw")
-    edges_frame = tk.Frame(vote_frame,  border=0)
-    edges_frame.place(relx=0, rely=0.5, relheight=0.5,relwidth=0.4, anchor="nw")
-    corners_frame = tk.Frame(vote_frame,  border=0)
-    corners_frame.place(relx=0.4, rely=0, relheight=0.5,relwidth=0.4, anchor="nw")
-    surface_frame = tk.Frame(vote_frame,   border=0)
-    surface_frame.place(relx=0.4, rely=0.5, relheight=0.5,relwidth=0.4, anchor="nw")
-    # Frame for the mean aka final vote
-    mean_frame = tk.Frame(vote_frame,  border=0 )
-    mean_frame.place(relx=0.8, rely=0, relheight=1,relwidth=0.2, anchor="nw")
-
-    # Structure of the description frame
-    # Structure of the ability frame
-    ability_frame = tk.Frame(description_frame)
-    ability_frame.place(relx=0,rely=0,relheight=0.25,relwidth=1,anchor='nw')
-    ability_name_frame=tk.Frame(ability_frame)
-    ability_name_frame.place(relx=0,rely=0,relwidth=0.3,relheight=1)
-    ability_effect_frame=tk.Frame(ability_frame)
-    ability_effect_frame.place(relx=0.3,rely=0,relwidth=0.7,relheight=1)
-    # Structure of the move1 frame
-    move1_frame = tk.Frame(description_frame)
-    move1_frame.place(relx=0,rely=0.25,relheight=0.25,relwidth=1,anchor='nw')
-    move1_name_frame=tk.Frame(move1_frame)
-    move1_name_frame.place(relx=0,rely=0,relheight=1,relwidth=0.3)
-    move1_cost_frame=tk.Frame(move1_frame)
-    move1_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.1)
-    move1_effect_frame=tk.Frame(move1_frame)
-    move1_effect_frame.place(relx=0.4,rely=0,relheight=1,relwidth=0.5)
-    move1_damage_frame=tk.Frame(move1_frame)
-    move1_damage_frame.place(relx=0.9,rely=0,relheight=1,relwidth=0.1)
-    # Structure of the move2 frame
-    move2_frame = tk.Frame(description_frame)
-    move2_frame.place(relx=0,rely=0.5,relheight=0.25,relwidth=1,anchor='nw')
-    move2_name_frame=tk.Frame(move2_frame,background='red')
-    move2_name_frame.place(relx=0,rely=0,relheight=1,relwidth=0.3)
-    move2_cost_frame=tk.Frame(move2_frame,background='green')
-    move2_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.1)
-    move2_effect_frame=tk.Frame(move2_frame,background='yellow')
-    move2_effect_frame.place(relx=0.4,rely=0,relheight=1,relwidth=0.5)
-    move2_damage_frame=tk.Frame(move2_frame,background='purple')
-    move2_damage_frame.place(relx=0.9,rely=0,relheight=1,relwidth=0.1)
-    #Structure of the lower frame
-    lower_frame = tk.Frame(description_frame,background='white')
-    lower_frame.place(relx=0,rely=0.75,relheight=0.25,relwidth=1,anchor='nw')
-    # Adding frames to the notebook
     a_notebook.add(starting_frame, text="Start")
     a_notebook.add(card_depiction_frame, text="Card")
     a_notebook.tab(card_depiction_frame, state="hidden")
-
-    # Structure of the input form
-    upper_frame = tk.LabelFrame(card_depiction_frame, border=0,background="red")
-    upper_frame.place(relx=0, rely=0,relwidth=1, relheight=0.2)
-    here_it_is=tk.PhotoImage(file="images/GUI/Logo.png") #da sostituire con scritta here's your card! con font bellini che riprendono il logo 
-    Heres_your_card=tk.Label(upper_frame,image=here_it_is)
-    Heres_your_card.image=here_it_is
-    Heres_your_card.place(relx=0.5,rely=0.5,anchor="center")
-    home_button = tk.Button(card_depiction_frame, text='HOME', command=lambda: home(a_notebook, starting_frame, card_depiction_frame))
-    home_button.place(relx=0.003, rely=0.997, anchor="sw")
-
-    # Structure of the frames in the card depiction page
-    card_frame = tk.LabelFrame(card_depiction_frame, border=0,background='#2a75bb')
-    card_frame.place(relx=0, rely=0.3, relwidth=0.35,relheight=0.65, anchor="nw")
-    vote_frame = tk.LabelFrame(card_depiction_frame, height=50, width=300, border=2)
-    vote_frame.place(relx=0, rely=0.2, relwidth=0.35,relheight=0.1, anchor="nw")
-    name_frame=tk.LabelFrame(card_depiction_frame,background='yellow')
-    name_frame.place(relx=0.35,rely=0.2, relheight=0.1,relwidth=0.65,anchor='nw')
-    description_frame = tk.LabelFrame(card_depiction_frame, border=1,background='purple')
-    description_frame.place(relx=0.35, rely=0.3, relheight=0.65,relwidth=0.65, anchor="nw")
-
-    # Frames in the vote frame
-    # Frames for each individual vote
-    centering_frame = tk.LabelFrame(vote_frame,  border=0)
-    centering_frame.place(relx=0, rely=0,relheight=0.5,relwidth=0.4, anchor="nw")
-    edges_frame = tk.LabelFrame(vote_frame,  border=0)
-    edges_frame.place(relx=0, rely=0.5, relheight=0.5,relwidth=0.4, anchor="nw")
-    corners_frame = tk.LabelFrame(vote_frame,  border=0)
-    corners_frame.place(relx=0.4, rely=0, relheight=0.5,relwidth=0.4, anchor="nw")
-    surface_frame = tk.LabelFrame(vote_frame,   border=0)
-    surface_frame.place(relx=0.4, rely=0.5, relheight=0.5,relwidth=0.4, anchor="nw")
-    # Frame for the mean aka final vote
-    mean_frame = tk.LabelFrame(vote_frame,  border=0 )
-    mean_frame.place(relx=0.8, rely=0, relheight=1,relwidth=0.2, anchor="nw")
-
-    # Structure of the description frame
-    ability_frame = tk.LabelFrame(description_frame, background='green')
-    ability_frame.place(relx=0,rely=0,relheight=0.25,relwidth=1,anchor='nw')
-    move1_frame = tk.LabelFrame(description_frame,background='red')
-    move1_frame.place(relx=0,rely=0.25,relheight=0.25,relwidth=1,anchor='nw')
-    move2_frame = tk.LabelFrame(description_frame,background='cyan')
-    move2_frame.place(relx=0,rely=0.5,relheight=0.25,relwidth=1,anchor='nw')
-    weakness_frame = tk.LabelFrame(description_frame,background='white')
-    weakness_frame.place(relx=0,rely=0.75,relheight=0.25,relwidth=1,anchor='nw')
 
     # Structure of the start frame
     logo = Image.open("images/GUI/Logo_res.png")
@@ -249,6 +126,80 @@ def GUI(cen, cor, edg, sur):
     # Credits label
     credits_lbl = tk.Label(text="A project by Bianchi Christian, Mastrorilli Nicola, Ramil Leonard Vincent, Sannino Siria")
     credits_lbl.place(relx=0.997, rely=0.997, anchor='se')
+    # Structure of the card depiction frame
+    # Structure of the upper frame
+    upper_frame = tk.Frame(card_depiction_frame, border=0)
+    upper_frame.place(relx=0, rely=0,relwidth=1, relheight=0.2)
+    here_it_is=tk.PhotoImage(file="images/GUI/Logo.png") #da sostituire con scritta here's your card! con font bellini che riprendono il logo 
+    heres_your_card=tk.Label(upper_frame,image=here_it_is)
+    heres_your_card.image=here_it_is
+    heres_your_card.place(relx=0.5,rely=0.5,anchor="center")
 
+    card_frame = tk.LabelFrame(card_depiction_frame, border=0)
+    card_frame.place(relx=0, rely=0.3, relwidth=0.35,relheight=0.65, anchor="nw")
+    vote_frame = tk.LabelFrame(card_depiction_frame, height=50, width=300, border=2)
+    vote_frame.place(relx=0, rely=0.2, relwidth=0.35,relheight=0.1, anchor="nw")
+     # Frames for each individual vote
+    centering_frame = tk.Frame(vote_frame,  border=0)
+    centering_frame.place(relx=0, rely=0,relheight=0.5,relwidth=0.4, anchor="nw")
+    edges_frame = tk.Frame(vote_frame,  border=0)
+    edges_frame.place(relx=0, rely=0.5, relheight=0.5,relwidth=0.4, anchor="nw")
+    corners_frame = tk.Frame(vote_frame,  border=0)
+    corners_frame.place(relx=0.4, rely=0, relheight=0.5,relwidth=0.4, anchor="nw")
+    surface_frame = tk.Frame(vote_frame,   border=0)
+    surface_frame.place(relx=0.4, rely=0.5, relheight=0.5,relwidth=0.4, anchor="nw")
+    # Frame for the mean aka final vote
+    mean_frame = tk.Frame(vote_frame,  border=0 )
+    mean_frame.place(relx=0.8, rely=0, relheight=1,relwidth=0.2, anchor="nw")
+
+    #Name frame
+    name_frame=tk.LabelFrame(card_depiction_frame)
+    name_frame.place(relx=0.35,rely=0.2, relheight=0.1,relwidth=0.65,anchor='nw')
+     #Frames in name frame
+    inner_name_frame=tk.Frame(name_frame)
+    inner_name_frame.place(relx= 0,rely=0,relheight=1,relwidth=0.333)
+    set_frame=tk.Frame(name_frame)
+    set_frame.place(relx=0.333,rely=0,relheight=1,relwidth=0.333)
+    pv_frame=tk.Frame(name_frame)
+    pv_frame.place(relx=0.666,rely=0,relheight=0.5,relwidth=0.333)
+    type_frame=tk.Frame(name_frame)
+    type_frame.place(relx=0.666,rely=0.5,relheight=0.5,relwidth=0.333)
+    #Description frame:
+    description_frame = tk.LabelFrame(card_depiction_frame, border=1)
+    description_frame.place(relx=0.35, rely=0.3, relheight=0.65,relwidth=0.65, anchor="nw")
+    #structure of the description frame
+    # Structure of the ability frame
+    ability_frame = tk.Frame(description_frame)
+    ability_frame.place(relx=0,rely=0,relheight=0.25,relwidth=1,anchor='nw')
+    ability_name_frame=tk.Frame(ability_frame)
+    ability_name_frame.place(relx=0,rely=0,relwidth=0.3,relheight=1)
+    ability_effect_frame=tk.Frame(ability_frame)
+    ability_effect_frame.place(relx=0.3,rely=0,relwidth=0.7,relheight=1)
+    # Structure of the move1 frame
+    move1_frame = tk.Frame(description_frame)
+    move1_frame.place(relx=0,rely=0.25,relheight=0.25,relwidth=1,anchor='nw')
+    move1_name_frame=tk.Frame(move1_frame)
+    move1_name_frame.place(relx=0,rely=0,relheight=1,relwidth=0.3)
+    move1_cost_frame=tk.Frame(move1_frame)
+    move1_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.1)
+    move1_effect_frame=tk.Frame(move1_frame)
+    move1_effect_frame.place(relx=0.4,rely=0,relheight=1,relwidth=0.5)
+    move1_damage_frame=tk.Frame(move1_frame)
+    move1_damage_frame.place(relx=0.9,rely=0,relheight=1,relwidth=0.1)
+    # Structure of the move2 frame
+    move2_frame = tk.Frame(description_frame)
+    move2_frame.place(relx=0,rely=0.5,relheight=0.25,relwidth=1,anchor='nw')
+    move2_name_frame=tk.Frame(move2_frame)
+    move2_name_frame.place(relx=0,rely=0,relheight=1,relwidth=0.3)
+    move2_cost_frame=tk.Frame(move2_frame)
+    move2_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.1)
+    move2_effect_frame=tk.Frame(move2_frame)
+    move2_effect_frame.place(relx=0.4,rely=0,relheight=1,relwidth=0.5)
+    move2_damage_frame=tk.Frame(move2_frame)
+    move2_damage_frame.place(relx=0.9,rely=0,relheight=1,relwidth=0.1)
+    #Structure of the lower frame
+    lower_frame = tk.Frame(description_frame)
+    lower_frame.place(relx=0,rely=0.75,relheight=0.25,relwidth=1,anchor='nw')
+    
     # Start the application's main loop
     root.mainloop()
