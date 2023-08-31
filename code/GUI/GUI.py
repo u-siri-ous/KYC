@@ -6,7 +6,7 @@ def start():
     a_notebook.tab(card_depiction_frame, state="normal")
     a_notebook.select(card_depiction_frame)
 
-#Nicola's function that ChatGPT cancelled but it doesn't run yet so we don't know if it works
+#Nicola's command that ChatGPT cancelled but it doesn't run yet so we don't know if it works
 def kyc(refined_image, cen, cor, edg, sur):
         resized=refined_image.resize((300,375))
         card_pic=ImageTk.PhotoImage(resized)
@@ -30,6 +30,39 @@ def home():
     a_notebook.select(starting_frame)
     a_notebook.tab(card_depiction_frame, state="hidden")
 
+def set_base_toggle():
+     set_base_checkbox.toggle()
+     fossil_checkbox.deselect()
+     jungle_checkbox.deselect()
+     if var1.get()==1 or var2.get()==1 or var3.get()==1:
+        logo_button.configure(state="normal")
+     else:
+         logo_button.configure(state='disabled')
+     
+     
+          
+
+    
+def fossil_toggle():
+     fossil_checkbox.toggle()
+     jungle_checkbox.deselect()
+     set_base_checkbox.deselect()
+     if var1.get()==1 or var2.get()==1 or var3.get()==1:
+        logo_button.configure(state="normal")
+     else:
+         logo_button.configure(state='disabled')
+     
+
+def jungle_toggle():
+     jungle_checkbox.toggle()
+     fossil_checkbox.deselect()
+     set_base_checkbox.deselect()
+     if var1.get()==1 or var2.get()==1 or var3.get()==1:
+        logo_button.configure(state="normal")
+     else:
+         logo_button.configure(state='disabled')
+     
+          
 # Initialize the main application
 root = tk.Tk()
 root.title("KYC")
@@ -100,27 +133,35 @@ logo = Image.open("images/GUI/Logo_res.png")
 resized_logo=logo.resize((400,400))
 new_logo=ImageTk.PhotoImage(resized_logo)
 logo_button = tk.Button(starting_frame, image=new_logo, command=start, borderwidth=0,state="disabled")
-logo_button.place(relx=0.5, rely=0.35, anchor="center")
+logo_button.place(relx=0.5, rely=0.4, anchor="center")
 var1=tk.IntVar()
-set_base_checkbox=tk.Checkbutton(starting_frame,variable=var1)
-set_base_checkbox.place(relx=0.4,rely=0.8,anchor="center")
-set_base_button=tk.Button(text='Base')
-set_base_button.place(relx=0.4,rely=0.75,anchor="center")
+set_base_checkbox=tk.Checkbutton(starting_frame,variable=var1,border=0,state="disabled",relief="flat")
+set_base_checkbox.place(relx=0.4,rely=0.85,anchor="center")
+setbase_logo = Image.open('images\GUI\setbase.png')
+resized_setbase=setbase_logo.resize((25,25))
+new_setbase_logo=ImageTk.PhotoImage(resized_setbase)
+set_base_button=tk.Button(starting_frame,image=new_setbase_logo,border=1,command=set_base_toggle)
+set_base_button.place(relx=0.397,rely=0.8,anchor="center")
 var2=tk.IntVar()
-fossil_checkbox=tk.Checkbutton(starting_frame,variable=var2)
-fossil_checkbox.place(relx=0.5,rely=0.8,anchor="center")
-fossil_button=tk.Button()
-fossil_button.place(relx=0.5,rely=0.75,anchor="center")
+fossil_checkbox=tk.Checkbutton(starting_frame,variable=var2,border=0,state="disabled",relief='flat')
+fossil_checkbox.place(relx=0.5,rely=0.85,anchor="center")
+fossil_logo = Image.open('images\\GUI\\fossil.png')
+resized_fossil=fossil_logo.resize((25,25))
+new_fossil_logo=ImageTk.PhotoImage(resized_fossil)
+fossil_button=tk.Button(starting_frame,image=new_fossil_logo,border=1,command=fossil_toggle)
+fossil_button.place(relx=0.497,rely=0.8,anchor="center")
 var3=tk.IntVar()
-jungle_checkbox=tk.Checkbutton(starting_frame,variable=var3)
-jungle_checkbox.place(relx=0.6,rely=0.8,anchor="center")
-jungle_button=tk.Button()
-jungle_button.place(relx=0.6,rely=0.75,anchor="center")
-
+jungle_checkbox=tk.Checkbutton(starting_frame,variable=var3,border=0,state="disabled",relief="flat")
+jungle_checkbox.place(relx=0.6,rely=0.85,anchor="center")
+jungle_logo = Image.open('images\GUI\jungle.png')
+resized_jungle=jungle_logo.resize((25,25))
+new_jungle_logo=ImageTk.PhotoImage(resized_jungle)
+jungle_button=tk.Button(starting_frame,image=new_jungle_logo,border=1,command=jungle_toggle)
+jungle_button.place(relx=0.597,rely=0.8,anchor="center")
 
 # Descriptive label
 to_start = tk.Label(starting_frame, text="To get to know your card,select below the expansion it is from and then click the logo")
-to_start.place(relx=0.5, rely=0.7, anchor="center")
+to_start.place(relx=0.5, rely=0.75, anchor="center")
 
 # Credits label
 credits_lbl = tk.Label(text="A project by Bianchi Christian, Mastrorilli Nicola, Ramil Leonard Vincent, Sannino Siria")
