@@ -1,7 +1,7 @@
 import cv2 as cv
 from grader.valutator import grading
 from grader.refine import detect_edges
-from GUI.GUI import kyc
+from GUI.GUI import GUI
 
 def process_single_image(image_path):
     try:
@@ -28,8 +28,7 @@ def process_image_paths(image_paths):
         cen, cor, edg, sur = grading(path)
         process_single_image(path)
         # nnFunction(network_input)
-        kyc(cen, cor, edg, sur)
-        pass
+        GUI(cen, cor, edg, sur)
 
 def main():
     # List of image paths to process
@@ -42,9 +41,9 @@ def main():
         #'images/grader_test/grimer.jpeg'
         #'images/grader_test/machoke.jpg'
         #'images/grader_test/ponyta.jpg'
-        #'images/grader_test/psyduck.jpg'
+        'images/grader_test/psyduck.jpg'
         #'images/grader_test/staryu.jpg'
-        'images/grader_test/vulpix.jpg'
+        #'images/grader_test/vulpix.jpg'
         #'images/grader_test/weedle.jpg'
         #'images/grader_test/mankey.jpeg'
         #'images/grader_test/krabby.jpeg'
