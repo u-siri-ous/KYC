@@ -9,7 +9,7 @@ def start():
 '''
     
 #Nicola's command that ChatGPT cancelled but it doesn't run yet so we don't know if it works
-def kyc(cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame):
+def kyc(cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame):
         a_notebook.tab(card_depiction_frame, state="normal")
         a_notebook.select(card_depiction_frame)
         card = Image.open("code/card.jpg")
@@ -39,30 +39,36 @@ def kyc(cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, center
             set_name_label.configure(text='Fossil')
         elif  jungle_var.get()==1:
             set_name_label.configure(text='Jungle')
-        pv_number_label=tk.Label(pv_frame,text='',font='Helvetica 10') #to be filled by the number of PV
+        pv_number_label=tk.Label(pv_frame,text='',font='Helvetica 10') # text to be filled by the number of PV
         pv_number_label.place(relx=0.5,rely=0.5,anchor="center")
-        type_name_label=tk.Label(type_frame,text='',font='Helvetica 10') #to be filled by the pokemon type
+        type_name_label=tk.Label(type_frame,text='',font='Helvetica 10') # text to be filled by the pokemon type
         type_name_label.place(relx=0.5,rely=0.5,anchor="center")
-        ability_name_label=tk.Label(ability_name_frame,text='',font='Helvetica 20') #to be filled with ability name
+        ability_name_label=tk.Label(ability_name_frame,text='',font='Helvetica 20') # text to be filled with ability name
         ability_name_label.place(relx=0.5,rely=0.5,anchor='center')
-        ability_effect_label=tk.Label(ability_effect_frame,text='',font='Helvetica 10') #to be filled with ability effect
+        ability_effect_label=tk.Label(ability_effect_frame,text='',font='Helvetica 10') #text to be filled with ability effect
         ability_effect_label.place(relx=0.5,rely=0.5,anchor='center')
-        move1_name_label=tk.Label(move1_name_frame,text='',font='Helvetica 20') #to be filled with move1 name 
+        move1_name_label=tk.Label(move1_name_frame,text='',font='Helvetica 20') #text to be filled with move1 name 
         move1_name_label.place(relx=0.5,rely=0.5,anchor="center")
-        move1_cost_label=tk.Label(move1_cost_frame,text='',font='Helvetica 10') #to be filled with move1 cost
+        move1_cost_label=tk.Label(move1_cost_frame,text='',font='Helvetica 10') #text to be filled with move1 cost
         move1_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-        move1_effect_label=tk.Label(move1_effect_frame,text='',font='Helvetica 10') #to be filled with move1 effect
+        move1_effect_label=tk.Label(move1_effect_frame,text='',font='Helvetica 10') #text to be filled with move1 effect
         move1_effect_label.place(relx=0.5,rely=0.5,anchor="center")
-        move1_damage_label=tk.Label(move1_damage_frame,text='',font='Helvetica 10') #to be filled with move1 damage
+        move1_damage_label=tk.Label(move1_damage_frame,text='',font='Helvetica 10') #text to be filled with move1 damage
         move1_damage_label.place(relx=0.5,rely=0.5,anchor="center")
-        move2_name_label=tk.Label(move2_name_frame,text='',font='Helvetica 20') #to be filled with move2 name
+        move2_name_label=tk.Label(move2_name_frame,text='',font='Helvetica 20') #text to be filled with move2 name
         move2_name_label.place(relx=0.5,rely=0.5,anchor="center")
-        move2_cost_label=tk.Label(move2_cost_frame,text='',font='Helvetica 10') #to be filled with move2 cost
+        move2_cost_label=tk.Label(move2_cost_frame,text='',font='Helvetica 10') #text to be filled with move2 cost
         move2_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-        move2_effect_label=tk.Label(move2_effect_frame,text='',font='Helvetica 10') #to be filled with move2 effect
+        move2_effect_label=tk.Label(move2_effect_frame,text='',font='Helvetica 10') #text to be filled with move2 effect
         move2_effect_label.place(relx=0.5,rely=0.5,anchor="center")
-        move2_damage_label=tk.Label(move2_damage_frame,text='',font='Helvetica 10') #to be filled with move2 damage
+        move2_damage_label=tk.Label(move2_damage_frame,text='',font='Helvetica 10') #text to be filled with move2 damage
         move2_damage_label.place(relx=0.5,rely=0.5,anchor="center")
+        weakness_specification_label=tk.Label(weakness_frame,text='',font='Helvetica 10') #text to be filled with weakness
+        weakness_specification_label.place(relx=0.5,rely=0.5,anchor='center')
+        resistance_specification_label=tk.Label(resistance_frame,text='',font='Helvetica 10') #text to be filled with resistance
+        resistance_specification_label.place(relx=0.5,rely=0.5,anchor='center')
+        retreat_specification_label=tk.Label(retreat_frame,text='',font='Helvetica 10') #text to be filled with retreat
+        retreat_specification_label.place(relx=0.5,rely=0.5,anchor='center')
         pass
 
 def set_base_toggle(set_base_checkbox, fossil_checkbox, jungle_checkbox, set_base_var,fossil_var, jungle_var, logo_button):
@@ -121,7 +127,7 @@ def GUI(cen, cor, edg, sur):
     logo = Image.open("images/GUI/Logo_res.png")
     resized_logo=logo.resize((400,400))
     new_logo=ImageTk.PhotoImage(resized_logo)
-    logo_button = tk.Button(starting_frame, image=new_logo, command=lambda :kyc(cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame), borderwidth=0,state="disabled")
+    logo_button = tk.Button(starting_frame, image=new_logo, command=lambda :kyc(cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame), borderwidth=0,state="disabled")
     logo_button.place(relx=0.5, rely=0.4, anchor="center")
     #Set Base check structure
     set_base_var=tk.IntVar()
@@ -242,14 +248,20 @@ def GUI(cen, cor, edg, sur):
     lower_frame = tk.Frame(description_frame)
     lower_frame.place(relx=0,rely=0.75,relheight=0.25,relwidth=1,anchor='nw')
     #Wekness frame
-    weakness_frame=tk.Frame(lower_frame,background='red')
+    weakness_frame=tk.Frame(lower_frame)
     weakness_frame.place(relx=0,rely=0,relheight=1,relwidth=0.333)
+    weakness_label=tk.Label(weakness_frame,text='Weakness',font='Helvetica 10')
+    weakness_label.place(relx=0.5,rely=0.25,anchor='center')
     #Resistance frame
-    resistance_frame=tk.Frame(lower_frame,background='green')
+    resistance_frame=tk.Frame(lower_frame)
     resistance_frame.place(relx=0.333,rely=0,relheight=1,relwidth=0.333)
+    resistance_label=tk.Label(resistance_frame,text='Resistance',font='Helvetica 10')
+    resistance_label.place(relx=0.5,rely=0.25,anchor='center')
     #Retreat frame
-    retreat_frame=tk.Frame(lower_frame,background='blue')
+    retreat_frame=tk.Frame(lower_frame)
     retreat_frame.place(relx=0.666,rely=0,relheight=1,relwidth=0.333)
+    retreat_label=tk.Label(retreat_frame,text='Retreat cost',font='Helvetica 10')
+    retreat_label.place(relx=0.5,rely=0.25,anchor='center')
 
     # Start the application's main loop
     root.mainloop()
