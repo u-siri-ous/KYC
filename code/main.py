@@ -28,7 +28,8 @@ def process_image_paths(image_paths):
         cen, cor, edg, sur = grading(path)
         process_single_image(path)
         # nnFunction(network_input)
-        GUI(cen, cor, edg, sur)
+        p_name  = 'Psyduck'
+        GUI(p_name, cen, cor, edg, sur)
 
 def main():
     # List of image paths to process
