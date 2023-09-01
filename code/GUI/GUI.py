@@ -94,6 +94,7 @@ def GUI(cen, cor, edg, sur):
     new_logo=ImageTk.PhotoImage(resized_logo)
     logo_button = tk.Button(starting_frame, image=new_logo, command=lambda :kyc(cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame), borderwidth=0,state="disabled")
     logo_button.place(relx=0.5, rely=0.4, anchor="center")
+    #Set Base check structure
     var1=tk.IntVar()
     set_base_checkbox=tk.Checkbutton(starting_frame,variable=var1,border=0,state="disabled",relief="flat")
     set_base_checkbox.place(relx=0.4,rely=0.85,anchor="center")
@@ -102,6 +103,7 @@ def GUI(cen, cor, edg, sur):
     new_setbase_logo=ImageTk.PhotoImage(resized_setbase)
     set_base_button=tk.Button(starting_frame,image=new_setbase_logo,border=1,command=lambda: set_base_toggle(set_base_checkbox, fossil_checkbox, jungle_checkbox, var1, var2, var3, logo_button))
     set_base_button.place(relx=0.397,rely=0.8,anchor="center")
+    #Fossil check structure
     var2=tk.IntVar()
     fossil_checkbox=tk.Checkbutton(starting_frame,variable=var2,border=0,state="disabled",relief='flat')
     fossil_checkbox.place(relx=0.5,rely=0.85,anchor="center")
@@ -110,6 +112,7 @@ def GUI(cen, cor, edg, sur):
     new_fossil_logo=ImageTk.PhotoImage(resized_fossil)
     fossil_button=tk.Button(starting_frame,image=new_fossil_logo,border=1,command=lambda: fossil_toggle(fossil_checkbox, jungle_checkbox, set_base_checkbox, var1, var2, var3, logo_button))
     fossil_button.place(relx=0.497,rely=0.8,anchor="center")
+    #Jungle check structure
     var3=tk.IntVar()
     jungle_checkbox=tk.Checkbutton(starting_frame,variable=var3,border=0,state="disabled",relief="flat")
     jungle_checkbox.place(relx=0.6,rely=0.85,anchor="center")
@@ -200,6 +203,15 @@ def GUI(cen, cor, edg, sur):
     #Structure of the lower frame
     lower_frame = tk.Frame(description_frame)
     lower_frame.place(relx=0,rely=0.75,relheight=0.25,relwidth=1,anchor='nw')
-    
+    #Wekness frame
+    weakness_frame=tk.Frame(lower_frame,background='red')
+    weakness_frame.place(relx=0,rely=0,relheight=1,relwidth=0.333)
+    #Resistance frame
+    resistance_frame=tk.Frame(lower_frame,background='green')
+    resistance_frame.place(relx=0.333,rely=0,relheight=1,relwidth=0.333)
+    #Retreat frame
+    retreat_frame=tk.Frame(lower_frame,background='blue')
+    retreat_frame.place(relx=0.666,rely=0,relheight=1,relwidth=0.333)
+
     # Start the application's main loop
     root.mainloop()
