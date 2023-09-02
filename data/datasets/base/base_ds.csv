@@ -1,4 +1,4 @@
-Nome,Tipo,Rarità,Fase,PV,Ability,Mossa 1,Danno 1,Costo 1,Mossa 2,Danno 2,Costo 2,Debolezza,Resistenza,Costo ritirata,img
+Nome,Tipo,Raritï¿½,Fase,PV,Ability,Mossa 1,Danno 1,Costo 1,Mossa 2,Danno 2,Costo 2,Debolezza,Resistenza,Costo ritirata,img
 Alakazam,Psico,Rara olografica,2,80,Scambio danni,Stordiraggio,30,3 Psico,,,,Psico,,3 Qls,https://media.pokemoncentral.it/wiki/thumb/1/12/AlakazamSetBase1.jpg/180px-AlakazamSetBase1.jpg
 Blastoise,Acqua,Rara olografica,2,100,Danza della Pioggia,Idropompa,40+,3 Acqua,,,,Elettro,,3 Qls,https://media.pokemoncentral.it/wiki/thumb/3/39/BlastoiseSetBase2.jpg/180px-BlastoiseSetBase2.jpg
 Chansey,Normale,Rara olografica,Base,120,,Schiacciamento,,2 Qls,Sdoppiatore,80,4 Qls,Lotta,Psico -30,1 Qls,https://media.pokemoncentral.it/wiki/thumb/8/80/ChanseySetBase3.jpg/180px-ChanseySetBase3.jpg
@@ -6,13 +6,13 @@ Charizard,Fuoco,Rara olografica,2,120,Brucia Energia,Turbofuoco,100,4 Fuoco,,,,A
 Clefairy,Normale,Rara olografica,Base,40,,Canto,,1 Qls,Metronomo,,3 Qls,Lotta,Psico -30,1 Qls,https://media.pokemoncentral.it/wiki/thumb/9/9e/ClefairySetBase5.jpg/180px-ClefairySetBase5.jpg
 Gyarados,Acqua,Rara olografica,1,100,,Ira di Drago,50,3 Acqua,Bollaraggio,40,4 Acqua,Erba,Lotta -30,3 Qls,https://media.pokemoncentral.it/wiki/thumb/8/8a/GyaradosSetBase6.jpg/180px-GyaradosSetBase6.jpg
 Hitmonchan,Lotta,Rara olografica,Base,70,,Stoccata,20,1 Lotta,Pugno Speciale,40,2 Lotta 1 Qls,Psico,,2 Qls,https://media.pokemoncentral.it/wiki/thumb/6/6b/HitmonchanSetBase7.jpg/180px-HitmonchanSetBase7.jpg
-Machamp ,Lotta,Rara olografica,2,100,Contrattacco,Movimento sismico,60,3 Lotta 1  Qls,,,,Psico,,3 Qls,https://media.pokemoncentral.it/wiki/thumb/3/3a/MachampSetBase8%281_Edizione%29.jpg/180px-MachampSetBase8%281_Edizione%29.jpg
+Machamp,Lotta,Rara olografica,2,100,Contrattacco,Movimento sismico,60,3 Lotta 1  Qls,,,,Psico,,3 Qls,https://media.pokemoncentral.it/wiki/thumb/3/3a/MachampSetBase8%281_Edizione%29.jpg/180px-MachampSetBase8%281_Edizione%29.jpg
 Magneton,Elettro,Rara olografica,1,60,,Tuononda,30,2 Elettro 1 Qls,Autodistruzione,80,2 Elettro 2 Qls,Lotta,,1 Qls,https://media.pokemoncentral.it/wiki/thumb/c/c8/MagnetonSetBase9.jpg/180px-MagnetonSetBase9.jpg
 Mewtwo,Psico,Rara olografica,Base,60,,Psichico,10+,1 Psico 1 Qls,Barriera,,2 Psico,Psico,,3 Qls,https://media.pokemoncentral.it/wiki/thumb/2/29/MewtwoSetBase10.jpg/180px-MewtwoSetBase10.jpg
 Nidoking,Erba,Rara olografica,2,90,,Colpo,30+,1 Erba 2 Qls,Tossina,20,3 Erba,Psico,,3 Qls,https://media.pokemoncentral.it/wiki/thumb/9/9c/NidokingSetBase11.jpg/180px-NidokingSetBase11.jpg
 Ninetales,Fuoco,Rara olografica,1,80,,Esca,,2 Qls,Fuocobomba,80,4 Fuoco,Acqua,,1 Qls,https://wiki.pokemoncentral.it/File:NinetalesSetBase12.jpg
 Poliwrath,Acqua,Rara olografica,1,90,,Pistolacqua,30+,2 Acqua 1 Qls,Mulinello,40,2 Acqua 2 Qls,Erba,,3 Qls,https://media.pokemoncentral.it/wiki/thumb/d/d7/PoliwrathSetBase13.jpg/180px-PoliwrathSetBase13.jpg
-Raichu,Elettro,Rara olografica,1,80,,Agilità,20,1 Elettro 2 Qls,Tuono,60,3 Elettro 1 Qls,Lotta,,1 Qls,https://media.pokemoncentral.it/wiki/thumb/9/9a/RaichuSetBase14.jpg/180px-RaichuSetBase14.jpg
+Raichu,Elettro,Rara olografica,1,80,,Agilitï¿½,20,1 Elettro 2 Qls,Tuono,60,3 Elettro 1 Qls,Lotta,,1 Qls,https://media.pokemoncentral.it/wiki/thumb/9/9a/RaichuSetBase14.jpg/180px-RaichuSetBase14.jpg
 Venusaur,Erba,Rara olografica,2,100,Trasferimento Energia,Solarraggio,60,4 Erba,,,,Fuoco,,2 Qls,https://media.pokemoncentral.it/wiki/thumb/b/b8/VenusaurSetBase15.jpg/180px-VenusaurSetBase15.jpg
 Zapdos,Elettro,Rara olografica,Base,90,,Tuono,60,3 Elettro 1 Qls,Fulmine,100,4 Elettro,,Lotta -30,3 Qls,https://media.pokemoncentral.it/wiki/thumb/b/b0/ZapdosSetBase16.jpg/180px-ZapdosSetBase16.jpg
 Beedrill,Erba,Rara,2,80,,Doppio afo,30x,3 Qls,Velenospina,40,3 Erba,Fuoco,Lotta -30,,https://media.pokemoncentral.it/wiki/thumb/8/82/BeedrillSetBase17.jpg/180px-BeedrillSetBase17.jpg
@@ -32,7 +32,7 @@ Ivysaur,Erba,Non Comune,1,60,,Frustata,30,1 Erba 2 Qls,Velenpolvere,20,3 Erba,Fu
 Jynx,Psico,Non Comune,Base,70,,Doppiasberla,10x,1 Psico,Meditazione,20+,2 Psico 1 Qls,Psico,,2 Qls,https://media.pokemoncentral.it/wiki/thumb/0/0f/JynxSetBase31.jpg/180px-JynxSetBase31.jpg
 Kadabra,Psico,Non Comune,1,60,,Ripresa,,2 Psico,Superpsico,50,2 Psico 1 Qls,Psico,,2 Qls,https://media.pokemoncentral.it/wiki/thumb/1/15/KadabraSetBase32.jpg/180px-KadabraSetBase32.jpg
 Kakuna,Erba,Non Comune,1,80,,Indurimento,,2 Normale,Velenpolvere,20,2 Erba,Fuoco,,2 Qls,https://media.pokemoncentral.it/wiki/thumb/7/76/KakunaSetBase33.png/180px-KakunaSetBase33.png
-Machoke,Lotta,Non Comune,1,80,,Colpo-karatw,50-,2 Lotta 1 Qls,Sottomissione,60,2 Lotta 2 Qls,Psico,,3 Qls,https://media.pokemoncentral.it/wiki/thumb/b/bb/MachokeSetBase34.jpg/180px-MachokeSetBase34.jpg
+Machoke,Lotta,Non Comune,1,80,,Colpo-karate,50-,2 Lotta 1 Qls,Sottomissione,60,2 Lotta 2 Qls,Psico,,3 Qls,https://media.pokemoncentral.it/wiki/thumb/b/bb/MachokeSetBase34.jpg/180px-MachokeSetBase34.jpg
 Magikarp,Acqua,Non Comune,Base,30,,Azione,10,1 Qls,Convulsione,10x,1 Acqua,Elettro,,1 Qls,https://media.pokemoncentral.it/wiki/thumb/0/0e/MagikarpSetBase35.jpg/180px-MagikarpSetBase35.jpg
 Magmar,Fuoco,Non Comune,Base,50,,Fuocopugno,30,2 Fuoco,Lanciafiamme,50,2 Fuoco 1 Qls,Acqua,,2 Qls,https://media.pokemoncentral.it/wiki/thumb/0/08/MagmarSetBase36.jpg/180px-MagmarSetBase36.jpg
 Nidorino,Elettro,Non Comune,1,60,,Doppiocalcio,30x,1 Erba 2 Qls,Perfocorno,50,2 Erba 2 Qls,Psico,,1 Qls,https://media.pokemoncentral.it/wiki/thumb/6/63/NidorinoSetBase37.jpg/180px-NidorinoSetBase37.jpg
