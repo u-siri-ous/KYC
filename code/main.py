@@ -30,7 +30,7 @@ def process_image_paths(image_paths):
 def main():
     # List of image paths to process
     image_paths = [
-        # 'images/grader_test/electrode.jpeg',
+        'images/grader_test/electrode.jpeg',
         # 'images/grader_test/geodude.jpeg',
         # 'images/grader_test/pikachu.jpg',
         # 'images/grader_test/kangaskhan.jpeg', 0 danno

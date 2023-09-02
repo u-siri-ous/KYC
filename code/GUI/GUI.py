@@ -57,13 +57,13 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     type_name_label.place(relx=0.5,rely=0.5,anchor="center")
     ability_name_label=tk.Label(ability_name_frame,text=f'{p_details[5]}',font='Helvetica 20') # Ability Name
     ability_name_label.place(relx=0.5,rely=0.5,anchor='center')
-    ability_effect_label=tk.Label(ability_effect_frame,text='MISSING',font='Helvetica 10') # Ability Description MISSING
+    ability_effect_label=tk.Label(ability_effect_frame,text=f'{p_details[16]}',font='Helvetica 10') # Ability Description MISSING
     ability_effect_label.place(relx=0.5,rely=0.5,anchor='center')
     move1_name_label=tk.Label(move1_name_frame,text=f'{p_details[6]}',font='Helvetica 20') # Move 1 Name
     move1_name_label.place(relx=0.5,rely=0.5,anchor="center")
     move1_cost_label=tk.Label(move1_cost_frame,text=f'{p_details[8]}',font='Helvetica 10') # Move 1 Cost
     move1_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-    move1_effect_label=tk.Label(move1_effect_frame,text='MISSING',font='Helvetica 10') # Move 1 Effect MISSING
+    move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[17]}',font='Helvetica 10') # Move 1 Effect MISSING
     move1_effect_label.place(relx=0.5,rely=0.5,anchor="center")
     move1_damage_label=tk.Label(move1_damage_frame,text=f'{p_details[7]}',font='Helvetica 10') # Move 1 Damage
     move1_damage_label.place(relx=0.5,rely=0.5,anchor="center")
@@ -71,7 +71,7 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     move2_name_label.place(relx=0.5,rely=0.5,anchor="center")
     move2_cost_label=tk.Label(move2_cost_frame,text=f'{p_details[11]}',font='Helvetica 10') # Move 2 Cost
     move2_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-    move2_effect_label=tk.Label(move2_effect_frame,text='MISSING',font='Helvetica 10') # Move 2 Effect MISSING
+    move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[18]}',font='Helvetica 10') # Move 2 Effect MISSING
     move2_effect_label.place(relx=0.5,rely=0.5,anchor="center")
     move2_damage_label=tk.Label(move2_damage_frame,text=f'{p_details[10]}',font='Helvetica 10') # Move 2 Damage
     move2_damage_label.place(relx=0.5,rely=0.5,anchor="center")
