@@ -3,6 +3,7 @@ from tkinter import ttk
 from PIL import ImageTk, Image
 import csv
 
+
 #Nicola's command that ChatGPT cancelled but it doesn't run yet so we don't know if it works
 def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame):
         
@@ -13,8 +14,9 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     elif  jungle_var.get()==1:
         set='Jungle'
     
-    with open(f'data/datasets/{set}/{set}_ds.csv', mode='r') as file:
+    with open(f'data/datasets/{set}/{set}_ds.csv', mode='r', encoding='latin-1') as file:
         # Create a CSV reader
+        print(file)
         csv_reader = csv.reader(file)
 
         # Skip the header row
@@ -140,7 +142,7 @@ def GUI(p_name, cen, cor, edg, sur):
     set_base_var=tk.IntVar()
     set_base_checkbox=tk.Checkbutton(starting_frame,variable=set_base_var,border=0,state="disabled",relief="flat")
     set_base_checkbox.place(relx=0.4,rely=0.85,anchor="center")
-    setbase_logo = Image.open('images\GUI\setbase.png')
+    setbase_logo = Image.open('images/GUI/setbase.png')
     resized_setbase=setbase_logo.resize((25,25))
     new_setbase_logo=ImageTk.PhotoImage(resized_setbase)
     set_base_button=tk.Button(starting_frame,image=new_setbase_logo,border=1,command=lambda: set_base_toggle(set_base_checkbox, fossil_checkbox, jungle_checkbox, set_base_var,fossil_var,jungle_var, logo_button))
@@ -149,7 +151,7 @@ def GUI(p_name, cen, cor, edg, sur):
     fossil_var=tk.IntVar()
     fossil_checkbox=tk.Checkbutton(starting_frame,variable=fossil_var,border=0,state="disabled",relief='flat')
     fossil_checkbox.place(relx=0.5,rely=0.85,anchor="center")
-    fossil_logo = Image.open('images\\GUI\\fossil.png')
+    fossil_logo = Image.open('images/GUI/fossil.png')
     resized_fossil=fossil_logo.resize((25,25))
     new_fossil_logo=ImageTk.PhotoImage(resized_fossil)
     fossil_button=tk.Button(starting_frame,image=new_fossil_logo,border=1,command=lambda: fossil_toggle(fossil_checkbox, jungle_checkbox, set_base_checkbox, set_base_var,fossil_var,jungle_var, logo_button))
@@ -158,7 +160,7 @@ def GUI(p_name, cen, cor, edg, sur):
     jungle_var=tk.IntVar()
     jungle_checkbox=tk.Checkbutton(starting_frame,variable=jungle_var,border=0,state="disabled",relief="flat")
     jungle_checkbox.place(relx=0.6,rely=0.85,anchor="center")
-    jungle_logo = Image.open('images\GUI\jungle.png')
+    jungle_logo = Image.open('images/GUI/jungle.png')
     resized_jungle=jungle_logo.resize((25,25))
     new_jungle_logo=ImageTk.PhotoImage(resized_jungle)
     jungle_button=tk.Button(starting_frame,image=new_jungle_logo,border=1,command=lambda: jungle_toggle(jungle_checkbox, fossil_checkbox, set_base_checkbox, set_base_var,fossil_var,jungle_var, logo_button))

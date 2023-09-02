@@ -2,6 +2,8 @@ import cv2 as cv
 from grader.valutator import grading
 from grader.refine import detect_edges
 from GUI.GUI import GUI
+from NN.mainNN import classify_pokemon
+
 
 def process_single_image(image_path):
     try:
@@ -15,8 +17,8 @@ def process_single_image(image_path):
             # cv.imshow('Neural input', network_input)
             cv.imwrite('code/card.jpg', card)
             # cv.imshow('Symbol', symbol)
-            cv.waitKey(0)
-            cv.destroyAllWindows()
+            #cv.waitKey(0)
+            #cv.destroyAllWindows()
             return card, network_input
         else:
             print(f"No object detected in '{image_path.split('/')[-1].split('.')[0]}'")
@@ -26,10 +28,10 @@ def process_single_image(image_path):
 def process_image_paths(image_paths):
     for path in image_paths:
         cen, cor, edg, sur = grading(path)
-        process_single_image(path)
-        # nnFunction(network_input)
-        p_name  = 'Psyduck'
+        card, network_input = process_single_image(path)
+        p_name  = classify_pokemon(network_input, 'data/models/model3.h5', (64,64))
         GUI(p_name, cen, cor, edg, sur)
+        
 
 def main():
     # List of image paths to process
