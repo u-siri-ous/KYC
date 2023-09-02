@@ -3,14 +3,8 @@ from tkinter import ttk
 from PIL import ImageTk, Image
 import csv
 
-'''
-def start():
-    a_notebook.tab(card_depiction_frame, state="normal")
-    a_notebook.select(card_depiction_frame)
-'''
-    
 #Nicola's command that ChatGPT cancelled but it doesn't run yet so we don't know if it works
-def kyc(cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame):
+def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame):
         
     if set_base_var.get()==1:
         set='Base'
@@ -28,7 +22,7 @@ def kyc(cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, center
 
         # Perform the query
         for row in csv_reader:
-            if row[0] == 'Psyduck': # p_name
+            if row[0] == p_name:
                 p_details = row
 
     a_notebook.tab(card_depiction_frame, state="normal")
@@ -140,7 +134,7 @@ def GUI(p_name, cen, cor, edg, sur):
     logo = Image.open("images/GUI/Logo_res.png")
     resized_logo=logo.resize((400,400))
     new_logo=ImageTk.PhotoImage(resized_logo)
-    logo_button = tk.Button(starting_frame, image=new_logo, command=lambda :kyc(cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame), borderwidth=0,state="disabled")
+    logo_button = tk.Button(starting_frame, image=new_logo, command=lambda :kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame), borderwidth=0,state="disabled")
     logo_button.place(relx=0.5, rely=0.4, anchor="center")
     #Set Base check structure
     set_base_var=tk.IntVar()

@@ -7,11 +7,6 @@ def grading(path):
     cor = corners(image)
     edg = edges(image)
     sur = (cen + cor + edg)//3
-
-    print(f"Centering: {cen}")
-    print(f"Corners: {cor}")
-    print(f"Edges: {edg}")
-    print(f"Surface: {sur}")
     return cen, cor, edg, sur
 
 def borders(image):
