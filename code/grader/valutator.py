@@ -3,14 +3,16 @@ from grader.refine import detect_edges
 
 def grading(path):
     image, _, _ = detect_edges(path)
-    cen = centering(image)
-    cor = corners(image)
-    edg = edges(image)
+    height, width = image.shape
+    left, right, up, down = borders(image, height, width)
+
+    cen = centering(left, right, up, down)
+    cor = corners(image, height, width, left, right, up, down)
+    edg = edges(image, height, width, left, right, up, down)
     sur = (cen + cor + edg)//3
     return cen, cor, edg, sur
 
-def borders(image):
-    height, width = image.shape
+def borders(image, height, width):
     middle_x = width // 2
     middle_y = height // 2
 
@@ -70,9 +72,7 @@ def borders(image):
 
     return left, right, up, down
 
-def centering(image):
-    left, right, up, down = borders(image)
-
+def centering(left, right, up, down):
     horizontal_ratio = int((left / right) * 10) if left < right else int((right / left) * 10)
     vertical_ratio = int((up / down) * 10) if up < down else int((down / up) * 10)
 
@@ -82,9 +82,7 @@ def white_pixeles(corner):
     percentage_white_pixels = (cv.countNonZero(corner) / corner.size) * 10
     return int(percentage_white_pixels + 1)
 
-def corners(image):
-    left, right, up, down = borders(image)
-    height, width = image.shape
+def corners(image, height, width, left, right, up, down):
 
     # Calculate the percentage of white pixels for each corner
     top_left_corner = white_pixeles(image[0:up, 0:left])
@@ -97,9 +95,7 @@ def corners(image):
 
     return average_corner_percentage
 
-def edges(image):
-    left, right, up, down = borders(image)
-    height, width = image.shape
+def edges(image, height, width, left, right, up, down):
 
     # Calculate the percentage of white pixels for each edge
     top_edge = white_pixeles(image[0:up, 0:width])
