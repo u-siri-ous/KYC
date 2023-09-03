@@ -52,20 +52,20 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     set_name_label.place(relx=0.25,rely=0.5,anchor='w')
     set_name_label.configure(text=f'{set}')
     rarity_label=tk.Label(rarity_frame,text=f'{p_details[2]}',font='Helvetica 15') #Rarity
-    rarity_label.place(relx=0.25,rely=0.5,anchor='w')
-    pv_number_label=tk.Label(pv_frame,text=f'{p_details[4]}',font='Helvetica 10') # Pokemon PV
+    rarity_label.place(relx=0.3,rely=0.5,anchor='w')
+    pv_number_label=tk.Label(pv_frame,text=f'{p_details[4]}',font='Helvetica 15') # Pokemon PV
     pv_number_label.place(relx=0.5,rely=0.5,anchor="center")
-    type_name_label=tk.Label(type_frame,text=f'{p_details[1]}',font='Helvetica 10') # Pokemon Type
+    type_name_label=tk.Label(type_frame,text=f'{p_details[1]}',font='Helvetica 15') # Pokemon Type
     type_name_label.place(relx=0.5,rely=0.5,anchor="center")
     ability_name_label=tk.Label(ability_name_frame,text=f'{p_details[5]}',font='Helvetica 15') # Ability Name
     ability_name_label.place(relx=0.5,rely=0.5,anchor='center')
-    ability_effect_label=tk.Label(ability_effect_frame,text=f'{p_details[16]}',font='Helvetica 10', justify='left',wraplength=300) # Ability Description MISSING
+    ability_effect_label=tk.Label(ability_effect_frame,text=f'{p_details[16]}',font='Helvetica 10', justify='center',wraplength=300) # Ability Description MISSING
     ability_effect_label.place(relx=0.5,rely=0.5,anchor='center')
     move1_name_label=tk.Label(move1_name_frame,text=f'{p_details[6]}',font='Helvetica 15') # Move 1 Name
     move1_name_label.place(relx=0.5,rely=0.5,anchor="center")
     move1_cost_label=tk.Label(move1_cost_frame,text=f'{p_details[8]}',font='Helvetica 10') # Move 1 Cost
     move1_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-    move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[17]}',font='Helvetica 10',justify='left',wraplength=300) # Move 1 Effect MISSING
+    move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[17]}',font='Helvetica 10',justify='center',wraplength=300) # Move 1 Effect MISSING
     move1_effect_label.place(relx=0.5,rely=0.5,anchor="center")
     move1_damage_label=tk.Label(move1_damage_frame,text=f'{p_details[7]}',font='Helvetica 10') # Move 1 Damage
     move1_damage_label.place(relx=0.5,rely=0.5,anchor="center")
@@ -73,15 +73,15 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     move2_name_label.place(relx=0.5,rely=0.5,anchor="center")
     move2_cost_label=tk.Label(move2_cost_frame,text=f'{p_details[11]}',font='Helvetica 10') # Move 2 Cost
     move2_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-    move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[18]}',font='Helvetica 10',justify='left',wraplength=300) # Move 2 Effect MISSING
+    move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[18]}',font='Helvetica 10',justify='center',wraplength=300) # Move 2 Effect MISSING
     move2_effect_label.place(relx=0.5,rely=0.5,anchor="center")
     move2_damage_label=tk.Label(move2_damage_frame,text=f'{p_details[10]}',font='Helvetica 10') # Move 2 Damage
     move2_damage_label.place(relx=0.5,rely=0.5,anchor="center")
-    weakness_specification_label=tk.Label(weakness_frame,text=f'{p_details[12]}',font='Helvetica 10') # Weakness
+    weakness_specification_label=tk.Label(weakness_frame,text=f'{p_details[12]}',font='Helvetica 15') # Weakness
     weakness_specification_label.place(relx=0.5,rely=0.5,anchor='center')
-    resistance_specification_label=tk.Label(resistance_frame,text=f'{p_details[13]}',font='Helvetica 10') #text to be filled with resistance
+    resistance_specification_label=tk.Label(resistance_frame,text=f'{p_details[13]}',font='Helvetica 15') #text to be filled with resistance
     resistance_specification_label.place(relx=0.5,rely=0.5,anchor='center')
-    retreat_specification_label=tk.Label(retreat_frame,text=f'{p_details[14]}',font='Helvetica 10') #text to be filled with retreat
+    retreat_specification_label=tk.Label(retreat_frame,text=f'{p_details[14]}',font='Helvetica 15') #text to be filled with retreat
     retreat_specification_label.place(relx=0.5,rely=0.5,anchor='center')
 
 def set_base_toggle(set_base_checkbox, fossil_checkbox, jungle_checkbox, set_base_var,fossil_var, jungle_var, logo_button):
@@ -117,7 +117,7 @@ def jungle_toggle(jungle_checkbox, fossil_checkbox, set_base_checkbox, set_base_
 def GUI(p_name, cen, cor, edg, sur):
     root = tk.Tk()
     root.title("KYC")
-    root.geometry("850x700")
+    root.geometry("900x750")
     root.iconbitmap("images\GUI\Logo_wind.ico")
 
     # Notebook initialization
@@ -125,7 +125,7 @@ def GUI(p_name, cen, cor, edg, sur):
     a_notebook.pack(fill="both", expand=1)
 
     # Frame initialization
-    starting_frame = tk.Frame(a_notebook, width=850, height=700)
+    starting_frame = tk.Frame(a_notebook, width=900, height=750)
     card_depiction_frame = tk.Frame(a_notebook, width=850, height=700)
     starting_frame.pack(fill="both", expand=1)
     card_depiction_frame.pack(fill="both", expand=1)
@@ -209,7 +209,7 @@ def GUI(p_name, cen, cor, edg, sur):
     inner_name_frame.place(relx= 0,rely=0,relheight=1,relwidth=0.333)
     inner_name_label=tk.Label(inner_name_frame,text='Pokemon Name',font='Helvetica 8')
     inner_name_label.place(relx=0.5,rely=0.1,anchor='n')
-    set_frame=tk.Frame(name_frame,background='red')
+    set_frame=tk.Frame(name_frame)
     set_frame.place(relx=0.333,rely=0,relheight=0.5,relwidth=0.333)
     rarity_frame=tk.Frame(name_frame)
     rarity_frame.place(relx=0.333,rely=0.5,relheight=0.5,relwidth=0.333)
