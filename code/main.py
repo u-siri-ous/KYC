@@ -8,7 +8,7 @@ from NN.mainNN import classify_pokemon
 def process_single_image(image_path):
     try:
         # Get the refined image and vertices from the 'refine' module
-        refined_image, card, network_input, symbol = detect_edges(image_path)
+        refined_image, card, network_input= detect_edges(image_path)
         # detected_symbol = findexp(symbol)
 
         if card is not None:
@@ -30,11 +30,11 @@ def process_image_paths(image_paths):
 def main():
     # List of image paths to process
     image_paths = [
-        'images/grader_test/electrode.jpeg',
+        'images/grader_test/electrode.jpeg'
         # 'images/grader_test/geodude.jpeg',
         # 'images/grader_test/pikachu.jpg',
         # 'images/grader_test/kangaskhan.jpeg', 0 danno
-        # 'images/grader_test/machamp.jpg', # da rirunnare
+        # 'images/grader_test/machamp.jpg' # da rirunnare
         # 'images/grader_test/grimer.jpeg', foto non valida
         # 'images/grader_test/machoke.jpg',
         # 'images/grader_test/ponyta.jpg',

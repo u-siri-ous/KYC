@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
-import csv
+import csv, sys
 
 
 #Nicola's command that ChatGPT cancelled but it doesn't run yet so we don't know if it works
@@ -26,6 +26,9 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
         for row in csv_reader:
             if row[0] == p_name:
                 p_details = row
+            else:
+                print(f"Sorry, there is no {p_name} in {set}, be sure to choose the right expansion!")
+                sys.exit()
 
     a_notebook.tab(card_depiction_frame, state="normal")
     a_notebook.select(card_depiction_frame)

@@ -2,7 +2,7 @@ import cv2 as cv
 from grader.refine import detect_edges
 
 def grading(path):
-    image, _, _, _ = detect_edges(path)
+    image, _, _ = detect_edges(path)
     cen = centering(image)
     cor = corners(image)
     edg = edges(image)
