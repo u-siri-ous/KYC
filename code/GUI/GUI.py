@@ -16,8 +16,8 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     
     with open(f'data/datasets/{set}/{set}_ds.CSV', mode='r', encoding='latin-1') as file:
         # Create a CSV reader
-        print(file)
         csv_reader = csv.reader(file,delimiter=';')
+        p_details = []
 
         # Skip the header row
         next(csv_reader)
@@ -26,9 +26,10 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
         for row in csv_reader:
             if row[0] == p_name:
                 p_details = row
-            else:
-                print(f"Sorry, there is no {p_name} in {set}, be sure to choose the right expansion!")
-                sys.exit()
+
+        if not p_details:
+            print(f"Sorry, there is no {p_name} in {set}, be sure to choose the right expansion!")
+            sys.exit()
 
     a_notebook.tab(card_depiction_frame, state="normal")
     a_notebook.select(card_depiction_frame)
