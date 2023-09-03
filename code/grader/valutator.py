@@ -19,9 +19,9 @@ def borders(image):
     right = 0
     up = 0
     down = 0
-    end = False
 
     # Calculate width on the left
+    end = False
     for w in range(width):
         c = image[middle_y, w]
         if c == 0 and not end:
@@ -32,10 +32,8 @@ def borders(image):
         if c == 0 and end:
             break
 
-    # Reset the flag for the right side
-    end = False
-
     # Calculate width on the right
+    end = False
     for w in range(width - 1, -1, -1):
         c = image[middle_y, w]
         if c == 0 and not end:
@@ -75,79 +73,45 @@ def borders(image):
 def centering(image):
     left, right, up, down = borders(image)
 
-    # print('left:', left)
-    # print('right:', right)
-    # print('up:', up)
-    # print('down:', down)
+    horizontal_ratio = int((left / right) * 10) if left < right else int((right / left) * 10)
+    vertical_ratio = int((up / down) * 10) if up < down else int((down / up) * 10)
 
-
-    if left < right:
-        # print('Orizzontal ratio:', int((left / right)*10))
-        orizzontal = int(left / right)*10
-    else:
-        # print('Orizzontal ratio:', int((right / left)*10))
-        orizzontal = int((right / left)*10)
-
-    if up < down:
-        # print('Vertical ratio:', int((up / down)*10))
-        vertical = int((up / down)*10)
-    else:
-        # print('Vertical ratio:', int((down / up)*10))
-        vertical = int((down / up)*10)
-    # print()
-    return (vertical + orizzontal) // 2
+    return (vertical_ratio + horizontal_ratio) // 2
 
 def white_pixeles(corner):
-    white_pixel_count = cv.countNonZero(corner)
-    total_pixels = corner.size
-    percentage_white_pixels = (white_pixel_count / total_pixels) * 10
+    percentage_white_pixels = (cv.countNonZero(corner) / corner.size) * 10
     return int(percentage_white_pixels + 1)
 
 def corners(image):
     left, right, up, down = borders(image)
     height, width = image.shape
 
-    # top-left corner
-    tl = white_pixeles(image[0:up, 0:left])
-    # print(f"Percentage of white pixels in the top-left corner: {tl + 1}")
+    # Calculate the percentage of white pixels for each corner
+    top_left_corner = white_pixeles(image[0:up, 0:left])
+    top_right_corner = white_pixeles(image[0:up, width - right:width])
+    bottom_left_corner = white_pixeles(image[height - down:height, 0:left])
+    bottom_right_corner = white_pixeles(image[height - down:height, width - right:width])
 
-    # top-right corner
-    tr = white_pixeles(image[0:up, width - right:width])
-    # print(f"Percentage of white pixels in the top-right corner: {tr + 1}")
+    # Calculate the average percentage of white pixels for all corners
+    average_corner_percentage = (top_left_corner + top_right_corner + bottom_left_corner + bottom_right_corner) // 4
 
-    # bottom-left corner
-    bl = white_pixeles(image[height - down:height, 0:left])
-    # print(f"Percentage of white pixels in the bottom-left corner: {bl + 1}")
-
-    # bottom-right corner
-    br = white_pixeles(image[height - down:height, width - right:width])
-    # print(f"Percentage of white pixels in the bottom-right corner: {br + 1}")
-
-    # print()
-    return (tl + tr + bl + br)//4
+    return average_corner_percentage
 
 def edges(image):
     left, right, up, down = borders(image)
     height, width = image.shape
 
-    # top edge
-    t = white_pixeles(image[0:up, 0:width])
-    # print(f"Percentage of white pixels in the top edge: {t}")
+    # Calculate the percentage of white pixels for each edge
+    top_edge = white_pixeles(image[0:up, 0:width])
+    right_edge = white_pixeles(image[0:height, width - right:width])
+    bottom_edge = white_pixeles(image[height - down:height, 0:width])
+    left_edge = white_pixeles(image[0:height, 0:left])
 
-    # right edge
-    r = white_pixeles(image[0:height, width - right:width])
-    # print(f"Percentage of white pixels in the right edge: {r}")
-
-    # bottom edge
-    b = white_pixeles(image[height - down:height, 0:width])
-    # print(f"Percentage of white pixels in the bottom edge: {b}")
-
-    # left edge
-    l = white_pixeles(image[0:height, 0:left])
-    # print(f"Percentage of white pixels in the left edge: {l}")
+    # Calculate the average percentage of white pixels for all edges
+    average_edge_percentage = (top_edge + right_edge + bottom_edge + left_edge) // 4
 
     print()
-    return (t + r + b + l) // 4
+    return average_edge_percentage
 
 if __name__ == "__main__":
     pass

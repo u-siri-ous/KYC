@@ -18,20 +18,22 @@ def detect_edges(image_path):
 
         # Create a binary mask where pixels falling within the yellow color range become white (255) and others black (0)
         mask = cv.inRange(hsv_image, lower_yellow, upper_yellow)
-        #cv.imshow("mask",mask)
 
         # Find contours in the binary mask
         contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
         if len(contours) > 0:
             # Get the bounding rectangle of the largest contour
-            x, y, w, h = cv.boundingRect(max(contours, key=cv.contourArea))
+            largest_contour = max(contours, key=cv.contourArea)
+            x, y, w, h = cv.boundingRect(largest_contour)
 
-            # Saving image to perform calculations
-            # cv.imwrite("cropped_card.jpg", card[y:y+h, x:x+w])
+            # Calculate the regions of interest
+            cropped_mask = mask[y:y+h, x:x+w]
+            cropped_card = card[y:y+h, x:x+w]
+            cropped_details = cropped_card[h//6 : h//2, w//8 : (8*w)//10]
 
-            # Return the cropped region of the cropped mask and the bounding rectangle coordinates
-            return mask[y:y+h, x:x+w], card[y:y+h, x:x+w], card[y:y+h, x:x+w][h//6 : h//2, w//8 : (8*w)//10]
+            # Return the cropped mask, cropped card, and cropped details along with bounding rectangle coordinates
+            return cropped_mask, cropped_card, cropped_details
         else:
             # Return None if no yellow object is detected
             return None, None, None, None
