@@ -5,7 +5,7 @@ import csv
 
 
 #Nicola's command that ChatGPT cancelled but it doesn't run yet so we don't know if it works
-def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame):
+def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame,rarity_frame):
         
     if set_base_var.get()==1:
         set='Base'
@@ -14,7 +14,7 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     elif  jungle_var.get()==1:
         set='Jungle'
     
-    with open(f'data/datasets/{set}/{set}_ds.csv', mode='r', encoding='latin-1') as file:
+    with open(f'data/datasets/{set}/{set}_ds.CSV', mode='r', encoding='latin-1') as file:
         # Create a CSV reader
         print(file)
         csv_reader = csv.reader(file)
@@ -46,32 +46,34 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     mean=(cen+cor+edg+sur)//4
     mean_label=tk.Label(mean_frame,text="{}".format(mean),font='80')  # Final Value
     mean_label.place(relx=0.5,rely=0.5,anchor='center')
-    pokemon_name_label=tk.Label(inner_name_frame,text=f'{p_details[0]}',font='Helvetica 20') # Pokemon name
-    pokemon_name_label.pack()
-    set_name_label=tk.Label(set_frame,text='',font='Helvetica 20')
-    set_name_label.pack()
+    pokemon_name_label=tk.Label(inner_name_frame,text=f'{p_details[0]}',font='Helvetica 20',pady=1) # Pokemon name
+    pokemon_name_label.place(relx=0.5,rely=0.35,anchor='n')
+    set_name_label=tk.Label(set_frame,text='',font='Helvetica 15') #Set the card is from
+    set_name_label.place(relx=0.25,rely=0.5,anchor='w')
     set_name_label.configure(text=f'{set}')
+    rarity_label=tk.Label(rarity_frame,text=f'{p_details[2]}',font='Helvetica 15') #Rarity
+    rarity_label.place(relx=0.25,rely=0.5,anchor='w')
     pv_number_label=tk.Label(pv_frame,text=f'{p_details[4]}',font='Helvetica 10') # Pokemon PV
     pv_number_label.place(relx=0.5,rely=0.5,anchor="center")
     type_name_label=tk.Label(type_frame,text=f'{p_details[1]}',font='Helvetica 10') # Pokemon Type
     type_name_label.place(relx=0.5,rely=0.5,anchor="center")
-    ability_name_label=tk.Label(ability_name_frame,text=f'{p_details[5]}',font='Helvetica 20') # Ability Name
+    ability_name_label=tk.Label(ability_name_frame,text=f'{p_details[5]}',font='Helvetica 15') # Ability Name
     ability_name_label.place(relx=0.5,rely=0.5,anchor='center')
-    ability_effect_label=tk.Label(ability_effect_frame,text=f'{p_details[16]}',font='Helvetica 10') # Ability Description MISSING
+    ability_effect_label=tk.Label(ability_effect_frame,text=f'{p_details[16]}',font='Helvetica 10', justify='left',wraplength=15) # Ability Description MISSING
     ability_effect_label.place(relx=0.5,rely=0.5,anchor='center')
-    move1_name_label=tk.Label(move1_name_frame,text=f'{p_details[6]}',font='Helvetica 20') # Move 1 Name
+    move1_name_label=tk.Label(move1_name_frame,text=f'{p_details[6]}',font='Helvetica 15') # Move 1 Name
     move1_name_label.place(relx=0.5,rely=0.5,anchor="center")
     move1_cost_label=tk.Label(move1_cost_frame,text=f'{p_details[8]}',font='Helvetica 10') # Move 1 Cost
     move1_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-    move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[17]}',font='Helvetica 10') # Move 1 Effect MISSING
+    move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[17]}',font='Helvetica 10',justify='left',wraplength=15) # Move 1 Effect MISSING
     move1_effect_label.place(relx=0.5,rely=0.5,anchor="center")
     move1_damage_label=tk.Label(move1_damage_frame,text=f'{p_details[7]}',font='Helvetica 10') # Move 1 Damage
     move1_damage_label.place(relx=0.5,rely=0.5,anchor="center")
-    move2_name_label=tk.Label(move2_name_frame,text=f'{p_details[9]}',font='Helvetica 20') # Move 2 Name
+    move2_name_label=tk.Label(move2_name_frame,text=f'{p_details[9]}',font='Helvetica 15') # Move 2 Name
     move2_name_label.place(relx=0.5,rely=0.5,anchor="center")
     move2_cost_label=tk.Label(move2_cost_frame,text=f'{p_details[11]}',font='Helvetica 10') # Move 2 Cost
     move2_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-    move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[18]}',font='Helvetica 10') # Move 2 Effect MISSING
+    move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[18]}',font='Helvetica 10',justify='left',wraplength=15) # Move 2 Effect MISSING
     move2_effect_label.place(relx=0.5,rely=0.5,anchor="center")
     move2_damage_label=tk.Label(move2_damage_frame,text=f'{p_details[10]}',font='Helvetica 10') # Move 2 Damage
     move2_damage_label.place(relx=0.5,rely=0.5,anchor="center")
@@ -136,7 +138,7 @@ def GUI(p_name, cen, cor, edg, sur):
     logo = Image.open("images/GUI/Logo_res.png")
     resized_logo=logo.resize((400,400))
     new_logo=ImageTk.PhotoImage(resized_logo)
-    logo_button = tk.Button(starting_frame, image=new_logo, command=lambda :kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame), borderwidth=0,state="disabled")
+    logo_button = tk.Button(starting_frame, image=new_logo, command=lambda :kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame,rarity_frame), borderwidth=0,state="disabled")
     logo_button.place(relx=0.5, rely=0.4, anchor="center")
     #Set Base check structure
     set_base_var=tk.IntVar()
@@ -206,19 +208,23 @@ def GUI(p_name, cen, cor, edg, sur):
     inner_name_frame=tk.Frame(name_frame)
     inner_name_frame.place(relx= 0,rely=0,relheight=1,relwidth=0.333)
     inner_name_label=tk.Label(inner_name_frame,text='Pokemon Name',font='Helvetica 8')
-    inner_name_label.pack(pady=6)
-    set_frame=tk.Frame(name_frame)
-    set_frame.place(relx=0.333,rely=0,relheight=1,relwidth=0.333)
-    set_descriptive_label=tk.Label(set_frame,text='Set Name',font='Helvetica 8')
-    set_descriptive_label.pack(pady=6)
+    inner_name_label.place(relx=0.5,rely=0.1,anchor='n')
+    set_frame=tk.Frame(name_frame,background='red')
+    set_frame.place(relx=0.333,rely=0,relheight=0.5,relwidth=0.333)
+    rarity_frame=tk.Frame(name_frame)
+    rarity_frame.place(relx=0.333,rely=0.5,relheight=0.5,relwidth=0.333)
+    rarity_descriptive_label=tk.Label(rarity_frame,text='Rarity:',font='Helvetica 10')
+    rarity_descriptive_label.place(relx=0.1,rely=0.5,anchor='w')
+    set_descriptive_label=tk.Label(set_frame,text='Set:',font='Helvetica 10')
+    set_descriptive_label.place(relx=0.1,rely=0.5,anchor='w')
     pv_frame=tk.Frame(name_frame)
     pv_frame.place(relx=0.666,rely=0,relheight=0.5,relwidth=0.333)
     pv_label=tk.Label(pv_frame,text='PV:',font='Helvetica 10')
-    pv_label.place(relx=0.25,rely=0.5,anchor="center")
+    pv_label.place(relx=0.1,rely=0.5,anchor="w")
     type_frame=tk.Frame(name_frame)
     type_frame.place(relx=0.666,rely=0.5,relheight=0.5,relwidth=0.333)
     type_label=tk.Label(type_frame,text='Type:',font='Helvetica 10')
-    type_label.place(relx=0.25,rely=0.5,anchor="center")
+    type_label.place(relx=0.1,rely=0.5,anchor="w")
 
     #Description frame:
     description_frame = tk.LabelFrame(card_depiction_frame, border=1)
