@@ -108,9 +108,9 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     move1_cost_label=tk.Label(move1_cost_frame,text=f'{p_details[8]}',font=(('Cascadia Code'), 10),background=palette[2],wraplength=100) # Move 1 Cost
     move1_cost_label.place(relx=0.5,rely=0.5,anchor="center")
     if p_details[17]=='':
-        move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[7]}',font=(('Cascadia Code'), 15),justify='center',wraplength=300,background=palette[2])
+        move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[7]}',font=(('Cascadia Code'), 15),justify='center',wraplength=250,background=palette[2])
     else:
-        move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[17]}',font=(('Cascadia Code'), 10),justify='center',wraplength=300,background=palette[2]) # Move 1 Effect
+        move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[17]}',font=(('Cascadia Code'), 10),justify='center',wraplength=250,background=palette[2]) # Move 1 Effect
     move1_effect_label.place(relx=0.5,rely=0.5,anchor="center")
     if p_details[17]!='':
         move1_damage_label=tk.Label(move1_damage_frame,text=f'{p_details[7]}',font=(('Cascadia Code'), 10),background=palette[2]) # Move 1 Damage
@@ -122,9 +122,9 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     move2_cost_label=tk.Label(move2_cost_frame,text=f'{p_details[11]}',font=(('Cascadia Code'), 10),background=palette[1],wraplength=100) # Move 2 Cost
     move2_cost_label.place(relx=0.5,rely=0.5,anchor="center")
     if p_details[18]=='':
-        move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[10]}',font=(('Cascadia Code'), 15),justify='center',wraplength=300,background=palette[1])
+        move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[10]}',font=(('Cascadia Code'), 15),justify='center',wraplength=250,background=palette[1])
     else:
-        move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[18]}',font=(('Cascadia Code'), 10),justify='center',wraplength=300,background=palette[1])
+        move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[18]}',font=(('Cascadia Code'), 10),justify='center',wraplength=250,background=palette[1])
     move2_effect_label.place(relx=0.5,rely=0.5,anchor="center")
     if p_details[18]!='':
         move2_damage_label=tk.Label(move2_damage_frame,text=f'{p_details[10]}',font=(('Cascadia Code'), 10),background=palette[1]) # Move 2 Damage
@@ -297,9 +297,9 @@ def GUI(p_name, cen, cor, edg, sur):
     move1_cost_frame=tk.Frame(move1_frame)
     move1_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.15)
     move1_effect_frame=tk.Frame(move1_frame)
-    move1_effect_frame.place(relx=0.45,rely=0,relheight=1,relwidth=0.5)
+    move1_effect_frame.place(relx=0.45,rely=0,relheight=1,relwidth=0.45)
     move1_damage_frame=tk.Frame(move1_frame)
-    move1_damage_frame.place(relx=0.95,rely=0,relheight=1,relwidth=0.05)
+    move1_damage_frame.place(relx=0.9,rely=0,relheight=1,relwidth=0.1)
     # Structure of the move2 frame
     move2_frame = tk.Frame(description_frame)
     move2_frame.place(relx=0,rely=0.5,relheight=0.25,relwidth=1,anchor='nw')
@@ -308,9 +308,9 @@ def GUI(p_name, cen, cor, edg, sur):
     move2_cost_frame=tk.Frame(move2_frame)
     move2_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.15)
     move2_effect_frame=tk.Frame(move2_frame)
-    move2_effect_frame.place(relx=0.45,rely=0,relheight=1,relwidth=0.5)
+    move2_effect_frame.place(relx=0.45,rely=0,relheight=1,relwidth=0.45)
     move2_damage_frame=tk.Frame(move2_frame)
-    move2_damage_frame.place(relx=0.95,rely=0,relheight=1,relwidth=0.05)
+    move2_damage_frame.place(relx=0.9,rely=0,relheight=1,relwidth=0.1)
     #Structure of the lower frame
     lower_frame = tk.Frame(description_frame)
     lower_frame.place(relx=0,rely=0.75,relheight=0.25,relwidth=1,anchor='nw')
