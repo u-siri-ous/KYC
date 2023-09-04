@@ -28,7 +28,7 @@ def process_and_display_images(image_paths):
 
 def main():
     image_paths = [
-        'images/grader_test/electrode.jpeg',
+        'images/grader_test/weedle.jpg',
         # Add more image paths here
     ]
 

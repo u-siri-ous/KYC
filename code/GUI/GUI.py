@@ -91,34 +91,46 @@ def kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame
     pokemon_name_label=tk.Label(inner_name_frame,text=f'{p_details[0]}',font=(('Cascadia Code'), 20),pady=1,background=palette[2]) # Pokemon name
     pokemon_name_label.place(relx=0.5,rely=0.35,anchor='n')
     set_name_label=tk.Label(set_frame,text='',font=(('Cascadia Code'), 15),background=palette[0]) #Set the card is from
-    set_name_label.place(relx=0.25,rely=0.5,anchor='w')
+    set_name_label.place(relx=0.4,rely=0.5,anchor='w')
     set_name_label.configure(text=f'{set}')
     rarity_label=tk.Label(rarity_frame,text=f'{p_details[2]}',font=(('Cascadia Code'), 15),background=palette[3]) #Rarity
-    rarity_label.place(relx=0.3,rely=0.5,anchor='w')
+    rarity_label.place(relx=0.4,rely=0.5,anchor='w')
     pv_number_label=tk.Label(pv_frame,text=f'{p_details[4]}',font=(('Cascadia Code'), 15),background=palette[3]) # Pokemon PV
-    pv_number_label.place(relx=0.5,rely=0.5,anchor="center")
+    pv_number_label.place(relx=0.4,rely=0.5,anchor="w")
     type_name_label=tk.Label(type_frame,text=f'{p_details[1]}',font=(('Cascadia Code'), 15),background=palette[0]) # Pokemon Type
-    type_name_label.place(relx=0.5,rely=0.5,anchor="center")
+    type_name_label.place(relx=0.4,rely=0.5,anchor="w")
     ability_name_label=tk.Label(ability_name_frame,text=f'{p_details[5]}',font=(('Cascadia Code'), 15),background=palette[1]) # Ability Name
     ability_name_label.place(relx=0.5,rely=0.5,anchor='center')
-    ability_effect_label=tk.Label(ability_effect_frame,text=f'{p_details[16]}',font=(('Cascadia Code'), 10), justify='center',wraplength=300,background=palette[1]) # Ability Description MISSING
+    ability_effect_label=tk.Label(ability_effect_frame,text=f'{p_details[16]}',font=(('Cascadia Code'), 10), justify='center',wraplength=400,background=palette[1]) # Ability Description MISSING
     ability_effect_label.place(relx=0.5,rely=0.5,anchor='center')
-    move1_name_label=tk.Label(move1_name_frame,text=f'{p_details[6]}',font=(('Cascadia Code'), 15),background=palette[2]) # Move 1 Name
+    move1_name_label=tk.Label(move1_name_frame,text=f'{p_details[6]}',font=(('Cascadia Code'), 15),background=palette[2],wraplength=150) # Move 1 Name
     move1_name_label.place(relx=0.5,rely=0.5,anchor="center")
-    move1_cost_label=tk.Label(move1_cost_frame,text=f'{p_details[8]}',font=(('Cascadia Code'), 10),background=palette[2]) # Move 1 Cost
+    move1_cost_label=tk.Label(move1_cost_frame,text=f'{p_details[8]}',font=(('Cascadia Code'), 10),background=palette[2],wraplength=100) # Move 1 Cost
     move1_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-    move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[17]}',font=(('Cascadia Code'), 10),justify='center',wraplength=300,background=palette[2]) # Move 1 Effect MISSING
+    if p_details[17]=='':
+        move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[7]}',font=(('Cascadia Code'), 15),justify='center',wraplength=300,background=palette[2])
+    else:
+        move1_effect_label=tk.Label(move1_effect_frame,text=f'{p_details[17]}',font=(('Cascadia Code'), 10),justify='center',wraplength=300,background=palette[2]) # Move 1 Effect
     move1_effect_label.place(relx=0.5,rely=0.5,anchor="center")
-    move1_damage_label=tk.Label(move1_damage_frame,text=f'{p_details[7]}',font=(('Cascadia Code'), 10),background=palette[2]) # Move 1 Damage
-    move1_damage_label.place(relx=0.5,rely=0.5,anchor="center")
-    move2_name_label=tk.Label(move2_name_frame,text=f'{p_details[9]}',font=(('Cascadia Code'), 15),background=palette[1]) # Move 2 Name
+    if p_details[17]!='':
+        move1_damage_label=tk.Label(move1_damage_frame,text=f'{p_details[7]}',font=(('Cascadia Code'), 10),background=palette[2]) # Move 1 Damage
+        move1_damage_label.place(relx=0.5,rely=0.5,anchor="center")
+    else:
+        pass
+    move2_name_label=tk.Label(move2_name_frame,text=f'{p_details[9]}',font=(('Cascadia Code'), 15),background=palette[1],wraplength=150) # Move 2 Name
     move2_name_label.place(relx=0.5,rely=0.5,anchor="center")
-    move2_cost_label=tk.Label(move2_cost_frame,text=f'{p_details[11]}',font=(('Cascadia Code'), 10),background=palette[1]) # Move 2 Cost
+    move2_cost_label=tk.Label(move2_cost_frame,text=f'{p_details[11]}',font=(('Cascadia Code'), 10),background=palette[1],wraplength=100) # Move 2 Cost
     move2_cost_label.place(relx=0.5,rely=0.5,anchor="center")
-    move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[18]}',font=(('Cascadia Code'), 10),justify='center',wraplength=300,background=palette[1]) # Move 2 Effect MISSING
+    if p_details[18]=='':
+        move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[10]}',font=(('Cascadia Code'), 15),justify='center',wraplength=300,background=palette[1])
+    else:
+        move2_effect_label=tk.Label(move2_effect_frame,text=f'{p_details[18]}',font=(('Cascadia Code'), 10),justify='center',wraplength=300,background=palette[1])
     move2_effect_label.place(relx=0.5,rely=0.5,anchor="center")
-    move2_damage_label=tk.Label(move2_damage_frame,text=f'{p_details[10]}',font=(('Cascadia Code'), 10),background=palette[1]) # Move 2 Damage
-    move2_damage_label.place(relx=0.5,rely=0.5,anchor="center")
+    if p_details[18]!='':
+        move2_damage_label=tk.Label(move2_damage_frame,text=f'{p_details[10]}',font=(('Cascadia Code'), 10),background=palette[1]) # Move 2 Damage
+        move2_damage_label.place(relx=0.5,rely=0.5,anchor="center")
+    else:
+        pass
     weakness_specification_label=tk.Label(weakness_frame,text=f'{p_details[12]}',font=(('Cascadia Code'), 15),background=palette[0]) # Weakness
     weakness_specification_label.place(relx=0.5,rely=0.5,anchor='center')
     resistance_specification_label=tk.Label(resistance_frame,text=f'{p_details[13]}',font=(('Cascadia Code'), 15),background=palette[2]) #text to be filled with resistance
@@ -259,7 +271,7 @@ def GUI(p_name, cen, cor, edg, sur):
     set_descriptive_label.place(relx=0.1,rely=0.5,anchor='w')
     pv_frame=tk.Frame(name_frame)
     pv_frame.place(relx=0.666,rely=0,relheight=0.5,relwidth=0.333)
-    pv_label=tk.Label(pv_frame,text='PV:',font=(('Cascadia Code'), 10))
+    pv_label=tk.Label(pv_frame,text='HP:',font=(('Cascadia Code'), 10))
     pv_label.place(relx=0.1,rely=0.5,anchor="w")
     type_frame=tk.Frame(name_frame)
     type_frame.place(relx=0.666,rely=0.5,relheight=0.5,relwidth=0.333)
@@ -283,22 +295,22 @@ def GUI(p_name, cen, cor, edg, sur):
     move1_name_frame=tk.Frame(move1_frame)
     move1_name_frame.place(relx=0,rely=0,relheight=1,relwidth=0.3)
     move1_cost_frame=tk.Frame(move1_frame)
-    move1_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.1)
+    move1_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.15)
     move1_effect_frame=tk.Frame(move1_frame)
-    move1_effect_frame.place(relx=0.4,rely=0,relheight=1,relwidth=0.5)
+    move1_effect_frame.place(relx=0.45,rely=0,relheight=1,relwidth=0.5)
     move1_damage_frame=tk.Frame(move1_frame)
-    move1_damage_frame.place(relx=0.9,rely=0,relheight=1,relwidth=0.1)
+    move1_damage_frame.place(relx=0.95,rely=0,relheight=1,relwidth=0.05)
     # Structure of the move2 frame
     move2_frame = tk.Frame(description_frame)
     move2_frame.place(relx=0,rely=0.5,relheight=0.25,relwidth=1,anchor='nw')
     move2_name_frame=tk.Frame(move2_frame)
     move2_name_frame.place(relx=0,rely=0,relheight=1,relwidth=0.3)
     move2_cost_frame=tk.Frame(move2_frame)
-    move2_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.1)
+    move2_cost_frame.place(relx=0.3,rely=0,relheight=1,relwidth=0.15)
     move2_effect_frame=tk.Frame(move2_frame)
-    move2_effect_frame.place(relx=0.4,rely=0,relheight=1,relwidth=0.5)
+    move2_effect_frame.place(relx=0.45,rely=0,relheight=1,relwidth=0.5)
     move2_damage_frame=tk.Frame(move2_frame)
-    move2_damage_frame.place(relx=0.9,rely=0,relheight=1,relwidth=0.1)
+    move2_damage_frame.place(relx=0.95,rely=0,relheight=1,relwidth=0.05)
     #Structure of the lower frame
     lower_frame = tk.Frame(description_frame)
     lower_frame.place(relx=0,rely=0.75,relheight=0.25,relwidth=1,anchor='nw')
@@ -317,6 +329,6 @@ def GUI(p_name, cen, cor, edg, sur):
     retreat_frame.place(relx=0.666,rely=0,relheight=1,relwidth=0.333)
     retreat_label=tk.Label(retreat_frame,text='Retreat cost',font=(('Cascadia Code'), 10))
     retreat_label.place(relx=0.5,rely=0.25,anchor='center')
-    palettes={'Normal':['#bba095','#f1f1f1','#f0e3b2','#cfc29b'],'Fire':['#f86038','#ea4e24','#bf2121','#9a1919'],'Water':['#0d53b0','#276cc7','#4179c2','#78a8e5'],'Grass':['#b8c870','#98b860','#7cba41','#4c9500'],'Electric':['#f4dc36','#f5e844','#f8f818','#f3ae33'],'Psychic':['#e0b0f8','#b080d0','#8c55b0','#7d45c7'],'Fighting':['#d3b299','#b4948b','#8b5d5a','#bd3c5a']}
+    palettes={'Normal':['#bba095','#f1f1f1','#f0e3b2','#cfc29b'],'Fire':['#f86038','#ea4e24','#bf2121','#9a1919'],'Water':['#0d53b0','#276cc7','#4179c2','#78a8e5'],'Grass':['#b8c870','#98b860','#7cba41','#4c9500'],'Electric':['#f4dc36','#f5e844','#f8f818','#e4af0e'],'Psychic':['#e0b0f8','#b080d0','#8c55b0','#7d45c7'],'Fighting':['#d3b299','#b4948b','#8b5d5a','#bd3c5a']}
     # Start the application's main loop
     root.mainloop()
