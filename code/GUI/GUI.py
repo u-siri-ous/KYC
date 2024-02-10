@@ -189,7 +189,7 @@ def GUI(p_name, cen, cor, edg, sur):
     a_notebook.tab(card_depiction_frame, state="hidden")
 
     # Structure of the start frame
-    logo = Image.open("images\GUI\logo_andrea.png")
+    logo = Image.open("images/GUI/logo_andrea.png")
     resized_logo=logo.resize((600,400))
     new_logo=ImageTk.PhotoImage(resized_logo)
     logo_button = tk.Button(starting_frame, image=new_logo, command=lambda :kyc(p_name, cen, cor, edg, sur, a_notebook, card_depiction_frame, card_frame, centering_frame, edges_frame, corners_frame, surface_frame, mean_frame,inner_name_frame,set_frame,set_base_var,fossil_var,jungle_var,pv_frame,type_frame,ability_name_frame,ability_effect_frame,move1_name_frame,move1_cost_frame,move1_effect_frame,move1_damage_frame,move2_name_frame,move2_cost_frame,move2_effect_frame,move2_damage_frame,weakness_frame,resistance_frame,retreat_frame,rarity_frame,palettes,rarity_descriptive_label,set_descriptive_label,inner_name_label,pv_label,type_label,weakness_label,resistance_label,retreat_label,upper_frame,heres_your_card), borderwidth=0,state="disabled")
