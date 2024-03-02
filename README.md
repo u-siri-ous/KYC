@@ -99,6 +99,11 @@ python -u "./code/main.py"
 ```
 4. Starting the program will open the GUI, you have to select the expansion and click the central button "Know Your Cards"
 
+
+https://github.com/LeoRamill/KYC/assets/161584956/9ef6ac0f-666b-439f-8236-1604cfcd9451
+
+
+
 ## Future Developments
 In the future, the aims of the project are:
 1. To be extended to other popular trading card games, such as Magic The Gathering and Yu-Gi-Oh, by adapting the structure.
