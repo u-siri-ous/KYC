@@ -12,6 +12,7 @@ Project related to the examination of *AI Lab: Computer Vision and NLP* of the a
 
 The program is designed to analyze pictures of Pokemon TCG 1st gen cards. It aims to classify the Pokemon, providing information regarding name, type, abilities, attacks, and any special features or edition indicators, and grade the card’s condition based on the Beckett Grading Services, using Computer Vision technique like bitmask and Convolutional Neural Network
 
+
 ### Codebase Structure
 All modules in the codebase were built by our team.
 
@@ -51,7 +52,7 @@ The project is structured in three parts, namely:
 - [Classifier](/code/NN)
 - [GUI](/code/GUI)
 
-which are then implemented in a \textit{main} file to coexist.
+which are then implemented in a `main.py` file to coexist.
 A strong variety of modules and techniques were used to achieve this objective, such as Keras for an easy neural network implementation, OpenCV for the wide range of functions it offers and Tkinter for a clean GUI.
 
 
