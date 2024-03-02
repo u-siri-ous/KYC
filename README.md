@@ -14,8 +14,8 @@ The program is designed to analyze pictures of Pokemon TCG 1st gen cards. It aim
 
 ### Codebase Structure
 All modules in the codebase were built by our team.
-    ├── code                       # code folder contains the main and the three parts 
-                                   # of the project: grader, classifier and GUI
+
+    ├── code                       # code folder contains the main and the three parts of the project: grader, classifier and GUI
       ├── GUI
         ├── GUI.py                 # code of GUI 
         ├── README.md      
@@ -35,8 +35,7 @@ All modules in the codebase were built by our team.
       ├── main.py
     ├── data                       # data folder contains datasets and models 
         ├── datasetNN              # dataset of images splitting in train and validation set for training Neural Network
-        ├── datasets               # it contains the files csv and xlsx of the first three 
-                                   # expansions of pokemon: base, fossil, jungle
+        ├── datasets               # it contains the files csv and xlsx of the first three expansions of pokemon: base, fossil, jungle
         ├── models                 # models folder contains all pre-trained neural network that we use to classify the pokemon
     ├── images                     # images folder contains testing image card and GUI images
         ├── GUI                    # images using on the GUI 
@@ -51,6 +50,7 @@ The project is structured in three parts, namely:
 - [Grader](/code/grader)
 - [Classifier](/code/NN)
 - [GUI](/code/GUI)
+
 which are then implemented in a \textit{main} file to coexist.
 A strong variety of modules and techniques were used to achieve this objective, such as Keras for an easy neural network implementation, OpenCV for the wide range of functions it offers and Tkinter for a clean GUI.
 
@@ -88,9 +88,7 @@ visualkeras # optional
 
 ## How to run
 
-1. Go to main.py:
-    ├── code
-        ├── main.py
+1. Go to main.py (`code>main.py`):
 
 2. Go to the function `main()` and add in the list `image_paths` the path of the interested pokemon card
 
