@@ -38,3 +38,7 @@ upper_yellow = np.array([30, 255, 255], dtype=np.uint8)
 # Create a binary mask where pixels falling within the yellow color range become white (255) and others black (0)
 mask = cv.inRange(hsv_image, lower_yellow, upper_yellow)
 ```
+<div align="center">
+    <img width="600" alt="Screenshot 2024-03-02 alle 20 07 37" src="https://github.com/LeoRamill/KYC/assets/161584956/0be06a20-142f-43f4-8aaa-0677ca644dd1">
+</div>
+
